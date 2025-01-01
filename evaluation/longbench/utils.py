@@ -4,71 +4,71 @@ from rouge_score import rouge_scorer
 LONG BENCH DATA SETTING
 """
 LB_DATA_PROMPT = {
-    "narrativeqa": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nStory: {context}\n\nNow, answer the question based on the story asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nQuestion: {input}\n\nAnswer:",
+    "narrativeqa_e": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nStory: {context}\n\nNow, answer the question based on the story asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nQuestion: {input}\n\nAnswer:",
     "qasper_e": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nArticle: {context}\n\n Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nQuestion: {input}\n\nAnswer:",
-    "multifieldqa_en": "Read the following text and answer briefly.\n\n{context}\n\nNow, answer the following question based on the above text, only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
+    "multifieldqa_en_e": "Read the following text and answer briefly.\n\n{context}\n\nNow, answer the following question based on the above text, only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
     "hotpotqa_e": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
     "2wikimqa_e": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
-    "musique": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
+    "musique_e": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
     "gov_report_e": "You are given a report by a government agency. Write a one-page summary of the report.\n\nReport:\n{context}\n\nNow, write a one-page summary of the report.\n\nSummary:",
     "qmsum_e": "You are given a meeting transcript and a query containing a question or instruction. Answer the query in one or more sentences.\n\nTranscript:\n{context}\n\nNow, answer the query based on the above meeting transcript in one or more sentences.\n\nQuery: {input}\nAnswer:",
     "multi_news_e": "You are given several news passages. Write a one-page summary of all news. \n\nNews:\n{context}\n\nNow, write a one-page summary of all the news.\n\nSummary:",
-    "trec": "Please determine the type of the question below. Here are some examples of questions.\n\n{context}\n{input}",
+    "trec_e": "Please determine the type of the question below. Here are some examples of questions.\n\n{context}\n{input}",
     "triviaqa_e": "Answer the question based on the given passage. Only give me the answer and do not output any other words. The following are some examples.\n\n{context}\n\n{input}",
     "samsum_e": "Summarize the dialogue into a few short sentences. The following are some examples.\n\n{context}\n\n{input}",
-    "passage_count": "There are some paragraphs below sourced from Wikipedia. Some of them may be duplicates. Please carefully read these paragraphs and determine how many unique paragraphs there are after removing duplicates. In other words, how many non-repeating paragraphs are there in total?\n\n{context}\n\nPlease enter the final count of unique paragraphs after removing duplicates. The output format should only contain the number, such as 1, 2, 3, and so on.\n\nThe final answer is: ",
-    "passage_retrieval_en": "Here are 30 paragraphs from Wikipedia, along with an abstract. Please determine which paragraph the abstract is from.\n\n{context}\n\nThe following is an abstract.\n\n{input}\n\nPlease enter the number of the paragraph that the abstract is from. The answer format must be like \"Paragraph 1\", \"Paragraph 2\", etc.\n\nThe answer is: ",
+    "passage_count_e": "There are some paragraphs below sourced from Wikipedia. Some of them may be duplicates. Please carefully read these paragraphs and determine how many unique paragraphs there are after removing duplicates. In other words, how many non-repeating paragraphs are there in total?\n\n{context}\n\nPlease enter the final count of unique paragraphs after removing duplicates. The output format should only contain the number, such as 1, 2, 3, and so on.\n\nThe final answer is: ",
+    "passage_retrieval_en_e": "Here are 30 paragraphs from Wikipedia, along with an abstract. Please determine which paragraph the abstract is from.\n\n{context}\n\nThe following is an abstract.\n\n{input}\n\nPlease enter the number of the paragraph that the abstract is from. The answer format must be like \"Paragraph 1\", \"Paragraph 2\", etc.\n\nThe answer is: ",
     "lcc_e": "Please complete the code given below. \n{context}Next line of code:\n",
     "repobench-p_e": "Please complete the code given below. \n{context}{input}Next line of code:\n"
 }
 
 LB_PRED_LEN = {
-    "narrativeqa": 128,
+    "narrativeqa_e": 128,
     "qasper_e": 128,
-    "multifieldqa_en": 64,
+    "multifieldqa_en_e": 64,
     "hotpotqa_e": 32,
     "2wikimqa_e": 32,
-    "musique": 32,
+    "musique_e": 32,
     "qmsum_e": 512,
     "gov_report_e": 512,
     "multi_news_e": 512,
-    "trec": 64,
+    "trec_e": 64,
     "triviaqa_e": 32,
     "samsum_e": 128,
-    "passage_count": 32,
-    "passage_retrieval_en": 32,
+    "passage_count_e": 32,
+    "passage_retrieval_en_e": 32,
     "lcc_e": 64,
     "repobench-p_e": 64
 }
 
 DATASET2MAXNEWTOKENS = {
-    "narrativeqa": 128,
-    "narrative_qa": 128,
-    "qasper": 128,
-    "multifieldqa_en": 64,
-    "multifieldqa_zh": 64,
-    "hotpotqa": 32,
-    "2wikimqa": 32,
-    "musique": 32,
-    "dureader": 128,
-    "gov_report": 512,
-    "qmsum": 512,
-    "multi_news": 512,
-    "vcsum": 512,
-    "trec": 64,
-    "triviaqa": 32,
-    "samsum": 128,
-    "lsht": 64,
-    "passage_count": 32,
-    "passage_retrieval_en": 32,
-    "passage_retrieval_zh": 32,
-    "lcc": 64,
-    "repobench-p": 64,
-    "summ_screen_fd":512,
-    "squality":128,
-    "quality":128,
-    "space_digest":128,
-    "book_sum_sort":128
+    "narrativeqa_e": 128,
+    "narrative_qa_e": 128,
+    "qasper_e": 128,
+    "multifieldqa_en_e": 64,
+    "multifieldqa_zh_e": 64,
+    "hotpotqa_e": 32,
+    "2wikimqa_e": 32,
+    "musique_e": 32,
+    "dureader_e": 128,
+    "gov_report_e": 512,
+    "qmsum_e": 512,
+    "multi_news_e": 512,
+    "vcsum_e": 512,
+    "trec_e": 64,
+    "triviaqa_e": 32,
+    "samsum_e": 128,
+    "lsht_e": 64,
+    "passage_count_e": 32,
+    "passage_retrieval_en_e": 32,
+    "passage_retrieval_zh_e": 32,
+    "lcc_e": 64,
+    "repobench-p_e": 64,
+    "summ_screen_fd_e":512,
+    "squality_e":128,
+    "quality_e":128,
+    "space_digest_e":128,
+    "book_sum_sort_e":128
 }
 
 DATASET2CATEGORY = {
@@ -103,6 +103,7 @@ DATASET2CATEGORY = {
 
 ALL_LB_TESTING_SETS = ["qasper", "multifieldqa_en", "hotpotqa", "2wikimqa", "gov_report", "multi_news", "trec", "triviaqa", "samsum", "passage_count", "passage_retrieval_en", "lcc", "repobench-p"]
 ALL_LB_TESTING_SETS = [f"{i}_e" for i in ALL_LB_TESTING_SETS]
+
 
 
 ALL_ZERO_TESTING_SETS = [

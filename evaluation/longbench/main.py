@@ -124,7 +124,7 @@ if __name__ == "__main__":
         # check generated cases
         for f in already_finish_files:
             num_test_cases = len(load_dataset('THUDM/LongBench', f, split='test'))
-            num_pred_cases = len(auto_read_data(os.path.join(args.save_path, f + ".jsonl")))
+            num_pred_cases = len(auto_read_data(os.path.join(pred_dir, f + ".jsonl")))
             if num_test_cases != num_pred_cases: 
                 print(f"{f} has not been processed, removing it from finished files ...")
                 already_finish_files.remove(f)
