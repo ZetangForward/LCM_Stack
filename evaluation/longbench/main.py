@@ -142,7 +142,11 @@ if __name__ == "__main__":
     for dataset_name in test_datasets:
         test_data = load_dataset('THUDM/LongBench', dataset_name, split='test')
         save_res_path = os.path.join(pred_dir, dataset_name + ".jsonl")
-        data_subsets = [test_data[i::world_size] for i in range(world_size)]
+        data_subsets = []
+        
+        for i in range(world_size):
+            subset = test_data.shard(num_shards=world_size, index=i)
+            data_subsets.append(subset)
 
         with tqdm(total=world_size) as pbar:
             processes = []
