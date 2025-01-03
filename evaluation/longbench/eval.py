@@ -69,16 +69,17 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
             continue
         dataset_name = filename.split('.')[0]
         pred_dataset_length, all_classes = DATASET2MAXNEWTOKENS[dataset_name], data_classes[dataset_name]
-        predictions, answers = [], []
+        predictions, answers, lengths = [], [], []
        
         with open(os.path.join(pred_path, filename), "r", encoding="utf-8") as f:
             for line in f:
                 data = json.loads(line)
                 predictions.append(data["pred_str"])
                 answers.append(data["answers"])
+                lengths.append(data["length"])
 
         if len(predictions) == 0: continue
-        score = scorer(dataset_name, predictions, answers, all_classes)
+        score = scorer_e(dataset_name, predictions, answers, lengths, all_classes)
         scores[dataset_name] = score
     
     # 假设您的JSON数据存储在变量json_data中
@@ -89,14 +90,14 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
 
     # 定义新的列顺序
     columns = [
-        ['Single-Document QA', 'Single-Document QA', 'Single-Document QA', 'Single-Document QA',
+        ['Single-Document QA', 'Single-Document QA', 'Single-Document QA',
         'Multi-Document QA', 'Multi-Document QA', 'Multi-Document QA', 'Multi-Document QA',
         'Summarization', 'Summarization', 'Summarization', 'Summarization',
         'Few-shot Learning', 'Few-shot Learning', 'Few-shot Learning', 'Few-shot Learning',
         'Synthetic Tasks', 'Synthetic Tasks', 'Synthetic Tasks',
         'Code Completion', 'Code Completion', 'Code Completion',
         'ALL Avg'],
-        ['qasper_e', 'multifieldqa_en_e', 'narrativeqa_e', 'Avg.',
+        ['qasper_e', 'multifieldqa_en_e', 'Avg.',
         'hotpotqa_e', '2wikimqa_e', 'musique', 'Avg.',
         'gov_report_e', 'qmsum_e', 'multi_news_e', 'Avg.',
         'trec_e', 'triviaqa_e', 'samsum_e', 'Avg.',

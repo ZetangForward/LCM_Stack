@@ -45,12 +45,11 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                 test_model.memory.reset()
 
             context, input_, answers = sample['context'], sample['input'], sample['answers']
-            if hasattr(sample, "length"):
+            if  "length" in sample:
                 length = sample["length"]
             else:
                 length = 0
             prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
-
             if not DATASET2CATEGORY[dataset_name] in ["EN Few-Shot Learning", "Code Completion"]:
                 prompt = tokenizer.apply_chat_template(
                     [{'role': 'user', 'content': prompt}],

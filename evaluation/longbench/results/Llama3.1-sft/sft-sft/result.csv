@@ -1,3 +1,0 @@
-Single-Document QA,Single-Document QA,Single-Document QA,Single-Document QA,Multi-Document QA,Multi-Document QA,Multi-Document QA,Multi-Document QA,Summarization,Summarization,Summarization,Summarization,Few-shot Learning,Few-shot Learning,Few-shot Learning,Few-shot Learning,Synthetic Tasks,Synthetic Tasks,Synthetic Tasks,Code Completion,Code Completion,Code Completion,ALL Avg
-qasper_e,multifieldqa_en_e,narrativeqa_e,Avg.,hotpotqa_e,2wikimqa_e,musique_e,Avg.,gov_report_e,qmsum_e,multi_news_e,Avg.,trec_e,triviaqa_e,samsum_e,Avg.,passage_count_e,passage_retrieval_en_e,Avg.,lcc_e,repobench-p_e,Avg.,
-44.73,55.35,,50.04,60.31,43.02,,51.665000000000006,34.73,,26.17,30.45,71.67,91.9,42.36,68.64333333333333,11.83,99.67,55.75,64.52,49.74,57.129999999999995,52.279722222222226
