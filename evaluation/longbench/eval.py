@@ -1,35 +1,12 @@
 import os
-import sys
 import json
 import argparse
 import numpy as np
 from fire import Fire
 from modelzipper.tutils import *
-from evaluation.longbench.utils import *
-from metrics import (
-    qa_f1_score, rouge_score, classification_score, 
-    retrieval_score, count_score, code_sim_score,
-)
-
-dataset2metric = {
-    "narrativeqa": qa_f1_score,
-    "qasper_e": qa_f1_score,
-    "multifieldqa_en": qa_f1_score,
-    "hotpotqa_e": qa_f1_score,
-    "2wikimqa_e": qa_f1_score,
-    "musique": qa_f1_score,
-    "gov_report_e": rouge_score,
-    "multi_news_e": rouge_score,
-    "trec": classification_score,
-    "triviaqa_e": qa_f1_score,
-    "samsum_e": rouge_score,
-    "passage_retrieval_en": retrieval_score,
-    "passage_count": count_score,
-    "lcc_e": code_sim_score,
-    "repobench-p_e": code_sim_score,
-    "qmsum_e": rouge_score,
-}
-
+from loguru import logger
+from utils import DATASET2METRICS, ALL_LB_TESTING_SETS, DATASET2MAXNEWTOKENS
+from datasets import load_dataset
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
@@ -47,7 +24,7 @@ def scorer_e(dataset, predictions, answers, lengths, all_classes):
         if dataset in ["trec", "triviaqa", "samsum", "lsht"]:
             prediction = prediction.lstrip('\n').split('\n')[0]
         for ground_truth in ground_truths:
-            score = max(score, dataset2metric[dataset](prediction, ground_truth, all_classes=all_classes))
+            score = max(score, DATASET2METRICS[dataset](prediction, ground_truth, all_classes=all_classes))
         total_score += score
     for key in scores.keys():
         scores[key] = round(100 * np.mean(scores[key]), 2)
@@ -63,7 +40,7 @@ def scorer(dataset, predictions, answers, all_classes):
         if dataset in ["trec", "triviaqa_e", "samsum_e", "lsht", 'narrativeqa', '']:
             prediction = prediction.lstrip('\n').split('\n')[0]
         for ground_truth in ground_truths:
-            score = max(score, dataset2metric[dataset](prediction, ground_truth, all_classes=all_classes))
+            score = max(score, DATASET2METRICS[dataset](prediction, ground_truth, all_classes=all_classes))
         total_score += score
     return round(100 * total_score / len(predictions), 2)
 
@@ -71,24 +48,27 @@ def scorer(dataset, predictions, answers, all_classes):
 def main(pred_path: str = None, benchmark_dataset_path: str = None):
     scores = dict()
     all_files = os.listdir(pred_path)
-    print("Evaluating on:", all_files)
+    logger.info("Evaluating on:", all_files)
 
     ## extract all golden data classes
     data_classes = {}
     if benchmark_dataset_path is None:
-        benchmark_dataset_path = "./data"
-    all_benchmark_data_files = os.listdir(benchmark_dataset_path)
-    for f in all_benchmark_data_files:
-        data_name = f.split('.')[0]
-        content = auto_read_data(os.path.join(benchmark_dataset_path, f))
-        data_classes[data_name] = content[0]["all_classes"]
+        for task_name in ALL_LB_TESTING_SETS:
+            content = load_dataset('THUDM/LongBench', task_name, split='test')
+            data_classes[task_name] = content[0]["all_classes"]
+    else:
+        all_benchmark_data_files = os.listdir(benchmark_dataset_path)
+        for f in all_benchmark_data_files:
+            task_name = f.split('.')[0]
+            content = auto_read_data(os.path.join(benchmark_dataset_path, f))
+            data_classes[task_name] = content[0]["all_classes"]
     
     ## read all predicted datasets
     for filename in all_files:
         if not filename.endswith("jsonl"):
             continue
         dataset_name = filename.split('.')[0]
-        pred_dataset_length, all_classes = longbench_pred_length[dataset_name], data_classes[dataset_name]
+        pred_dataset_length, all_classes = DATASET2MAXNEWTOKENS[dataset_name], data_classes[dataset_name]
         predictions, answers = [], []
        
         with open(os.path.join(pred_path, filename), "r", encoding="utf-8") as f:
@@ -116,11 +96,11 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
         'Synthetic Tasks', 'Synthetic Tasks', 'Synthetic Tasks',
         'Code Completion', 'Code Completion', 'Code Completion',
         'ALL Avg'],
-        ['qasper_e', 'multifieldqa_en', 'narrativeqa', 'Avg.',
-        'hotpotqa_e', '2wikimqa_e', 'musique', 'Avg.',
+        ['qasper_e', 'multifieldqa_en_e', 'narrativeqa_e', 'Avg.',
+        'hotpotqa_e', '2wikimqa_e', 'musique_e', 'Avg.',
         'gov_report_e', 'qmsum_e', 'multi_news_e', 'Avg.',
-        'trec', 'triviaqa_e', 'samsum_e', 'Avg.',
-        'passage_count', 'passage_retrieval_en', 'Avg.',
+        'trec_e', 'triviaqa_e', 'samsum_e', 'Avg.',
+        'passage_count_e', 'passage_retrieval_en_e', 'Avg.',
         'lcc_e', 'repobench-p_e', 'Avg.',
         '']
     ]

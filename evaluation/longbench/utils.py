@@ -1,4 +1,9 @@
 from rouge_score import rouge_scorer
+from metrics import (
+    qa_f1_score, rouge_score, classification_score, 
+    retrieval_score, count_score, code_sim_score,
+)
+
 
 """
 LONG BENCH DATA SETTING
@@ -9,7 +14,7 @@ LB_DATA_PROMPT = {
     "multifieldqa_en_e": "Read the following text and answer briefly.\n\n{context}\n\nNow, answer the following question based on the above text, only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
     "hotpotqa_e": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
     "2wikimqa_e": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
-    "musique_e": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
+    "musique": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
     "gov_report_e": "You are given a report by a government agency. Write a one-page summary of the report.\n\nReport:\n{context}\n\nNow, write a one-page summary of the report.\n\nSummary:",
     "qmsum_e": "You are given a meeting transcript and a query containing a question or instruction. Answer the query in one or more sentences.\n\nTranscript:\n{context}\n\nNow, answer the query based on the above meeting transcript in one or more sentences.\n\nQuery: {input}\nAnswer:",
     "multi_news_e": "You are given several news passages. Write a one-page summary of all news. \n\nNews:\n{context}\n\nNow, write a one-page summary of all the news.\n\nSummary:",
@@ -28,7 +33,7 @@ LB_PRED_LEN = {
     "multifieldqa_en_e": 64,
     "hotpotqa_e": 32,
     "2wikimqa_e": 32,
-    "musique_e": 32,
+    "musique": 32,
     "qmsum_e": 512,
     "gov_report_e": 512,
     "multi_news_e": 512,
@@ -49,7 +54,7 @@ DATASET2MAXNEWTOKENS = {
     "multifieldqa_zh_e": 64,
     "hotpotqa_e": 32,
     "2wikimqa_e": 32,
-    "musique_e": 32,
+    "musique": 32,
     "dureader_e": 128,
     "gov_report_e": 512,
     "qmsum_e": 512,
@@ -78,7 +83,7 @@ DATASET2CATEGORY = {
     "multifieldqa_zh": "CN Single-Doc QA",
     "hotpotqa_e": "EN Multi-Doc QA",
     "2wikimqa_e": "EN Multi-Doc QA",
-    "musique_e": "EN Multi-Doc QA",
+    "musique": "EN Multi-Doc QA",
     "dureader": "CN Multi-Doc QA",
     "gov_report_e": "EN Summarization",
     "qmsum_e": "EN Summarization",
@@ -95,6 +100,26 @@ DATASET2CATEGORY = {
     "repobench-p_e": "Code Completion",
 }
 
+DATASET2METRICS = {
+    "narrativeqa_e": qa_f1_score,
+    "qasper_e": qa_f1_score,
+    "multifieldqa_en_e": qa_f1_score,
+    "hotpotqa_e": qa_f1_score,
+    "2wikimqa_e": qa_f1_score,
+    "musique": qa_f1_score,
+    "gov_report_e": rouge_score,
+    "multi_news_e": rouge_score,
+    "trec_e": classification_score,
+    "triviaqa_e": qa_f1_score,
+    "samsum_e": rouge_score,
+    "passage_retrieval_en_e": retrieval_score,
+    "passage_count_e": count_score,
+    "lcc_e": code_sim_score,
+    "repobench-p_e": code_sim_score,
+    "qmsum_e": rouge_score,
+}
+
+
 # ALL_LB_TESTING_SETS = [
 #     "qasper_e", "multifieldqa_en_e", "hotpotqa_e", "2wikimqa_e", "gov_report_e", 
 #     "multi_news_e", "musique_e", "trec_e", "triviaqa_e",  "samsum_e", "passage_count_e", 
@@ -103,8 +128,7 @@ DATASET2CATEGORY = {
 
 ALL_LB_TESTING_SETS = ["qasper", "multifieldqa_en", "hotpotqa", "2wikimqa", "gov_report", "multi_news", "trec", "triviaqa", "samsum", "passage_count", "passage_retrieval_en", "lcc", "repobench-p"]
 ALL_LB_TESTING_SETS = [f"{i}_e" for i in ALL_LB_TESTING_SETS]
-
-
+ALL_LB_TESTING_SETS.append("musique")
 
 ALL_ZERO_TESTING_SETS = [
     "book_sum_sort", "narrative_qa", "qmsum", "squality", "gov_report", 
