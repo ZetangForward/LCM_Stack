@@ -97,7 +97,7 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
         'Code Completion', 'Code Completion', 'Code Completion',
         'ALL Avg'],
         ['qasper_e', 'multifieldqa_en_e', 'narrativeqa_e', 'Avg.',
-        'hotpotqa_e', '2wikimqa_e', 'musique_e', 'Avg.',
+        'hotpotqa_e', '2wikimqa_e', 'musique', 'Avg.',
         'gov_report_e', 'qmsum_e', 'multi_news_e', 'Avg.',
         'trec_e', 'triviaqa_e', 'samsum_e', 'Avg.',
         'passage_count_e', 'passage_retrieval_en_e', 'Avg.',

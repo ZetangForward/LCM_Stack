@@ -7,3 +7,4 @@ python main.py \
 # echo "generate finish ..., begin to evaluate ..."
 
 # python eval_longbench.py --pred_path=${SAVE_PATH}/${MODEL_NAME}
+ 

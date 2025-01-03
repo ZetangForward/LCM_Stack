@@ -45,6 +45,10 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                 test_model.memory.reset()
 
             context, input_, answers = sample['context'], sample['input'], sample['answers']
+            if hasattr(sample, "length"):
+                length = sample["length"]
+            else:
+                length = 0
             prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
 
             if not DATASET2CATEGORY[dataset_name] in ["EN Few-Shot Learning", "Code Completion"]:
@@ -89,7 +93,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                 )[0]
 
             pred_str = tokenizer.decode(outputs[input_ids.shape[-1]:], skip_special_tokens=True)
-            pred_res.append({"dataset_name": dataset_name, "pred_str": pred_str, "answers": answers}) 
+            pred_res.append({"dataset_name": dataset_name, "pred_str": pred_str, "answers": answers, "length": length}) 
             pbar.update(1)
             
     return_list.extend(pred_res)
@@ -112,7 +116,7 @@ if __name__ == "__main__":
     log_c(f'begin to eval on {world_size} gpus ...')
     
     if args.adapter_path:
-        suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-2]}"
+        suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-1]}"
         pred_dir = os.path.join(args.save_path, suffix_tag)
     else:
         pred_dir = os.path.join(args.save_path, "vanilla")
