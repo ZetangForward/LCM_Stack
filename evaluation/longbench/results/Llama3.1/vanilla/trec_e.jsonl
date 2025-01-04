@@ -1,300 +1,300 @@
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Percent, fraction\n", "answers": ["Percent, fraction"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Speed"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Material\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Description of a person\n", "answers": ["Description of a person"]}
-{"dataset_name": "trec_e", "pred_str": " Frequency\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " Height\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Lasting time of somethin"]}
-{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Size, area and volume\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Mountain\n", "answers": ["Mountain"]}
-{"dataset_name": "trec_e", "pred_str": " Distance\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Lasting time of somethin"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Equivalent term\n", "answers": ["Equivalent term"]}
-{"dataset_name": "trec_e", "pred_str": " Material\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Description of a person\n", "answers": ["Description of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Country\n", "answers": ["Country"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Manner of an action"]}
-{"dataset_name": "trec_e", "pred_str": " Invention, book and other creative piece\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Other celestial body\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Invention, book and other creative piece\n", "answers": ["Group or organization of person"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Lasting time of somethin"]}
-{"dataset_name": "trec_e", "pred_str": " Currency\n", "answers": ["Currency name"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Age\n", "answers": ["Lasting time of somethin"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Vehicle"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Vehicle\n", "answers": ["Vehicle"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Price\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Currency name"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Plant"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Manner of an action\n", "answers": ["Manner of an action"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Description of a person"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Vehicle"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " State\n", "answers": ["State"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Equivalent term"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Techniques and method\n", "answers": ["Techniques and method"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Product"]}
-{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"]}
-{"dataset_name": "trec_e", "pred_str": " Organ of body\n", "answers": ["Reason"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Language\n", "answers": ["Language"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Equivalent term"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Mountain\n", "answers": ["Mountain"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Plant\n", "answers": ["Plant"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Percent, fraction"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Continent\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Currency name\n", "answers": ["Currency name"]}
-{"dataset_name": "trec_e", "pred_str": " State\n", "answers": ["State"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Musical instrument"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Currency name"]}
-{"dataset_name": "trec_e", "pred_str": " Techniques and method\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Price"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Temperature"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Disease and medicine"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"]}
-{"dataset_name": "trec_e", "pred_str": " Manner of an action\n", "answers": ["Description of something"]}
-{"dataset_name": "trec_e", "pred_str": " Country\n", "answers": ["Country"]}
-{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"]}
-{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Lasting time of somethin"]}
-{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Event"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Temperature\n", "answers": ["Temperature"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Speed\n", "answers": ["Speed"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Group or organization of person"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Equivalent term"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Product"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Group or organization of person"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Temperature\n", "answers": ["Temperature"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Speed\n", "answers": ["Speed"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"]}
-{"dataset_name": "trec_e", "pred_str": " Currency name\n", "answers": ["Currency name"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Weight"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Lasting time of somethin"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " State\n", "answers": ["State"]}
-{"dataset_name": "trec_e", "pred_str": " Plant\n", "answers": ["Plant"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"]}
-{"dataset_name": "trec_e", "pred_str": " Sport\n", "answers": ["Sport"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other entity"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Equivalent term\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Currency name\n", "answers": ["Currency name"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Temperature"]}
-{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Invention, book and other creative piece\n", "answers": ["City"]}
-{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"]}
-{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Group or organization of person"]}
-{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Event\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Element and substance"]}
-{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"]}
-{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"]}
-{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Other number"]}
-{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
-{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"]}
-{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Mountain"]}
-{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"]}
-{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"]}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Distance, linear measure"], "length": 1670}
+{"dataset_name": "trec_e", "pred_str": " Percent, fraction\n", "answers": ["Percent, fraction"], "length": 3349}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1102}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 1329}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 3349}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 3576}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 3314}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2503}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Speed"], "length": 1054}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"], "length": 3721}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 746}
+{"dataset_name": "trec_e", "pred_str": " Material\n", "answers": ["Element and substance"], "length": 3725}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 1870}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1921}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Definition of something"], "length": 1742}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 1696}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2328}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 1746}
+{"dataset_name": "trec_e", "pred_str": " Description of a person\n", "answers": ["Description of a person"], "length": 3809}
+{"dataset_name": "trec_e", "pred_str": " Frequency\n", "answers": ["Other number"], "length": 1058}
+{"dataset_name": "trec_e", "pred_str": " Height\n", "answers": ["Distance, linear measure"], "length": 3389}
+{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"], "length": 3563}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Lasting time of somethin"], "length": 819}
+{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Definition of something"], "length": 1450}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other location"], "length": 1224}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 1229}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 3988}
+{"dataset_name": "trec_e", "pred_str": " Size, area and volume\n", "answers": ["Distance, linear measure"], "length": 1843}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1602}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 3432}
+{"dataset_name": "trec_e", "pred_str": " Mountain\n", "answers": ["Mountain"], "length": 1623}
+{"dataset_name": "trec_e", "pred_str": " Distance\n", "answers": ["Distance, linear measure"], "length": 884}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 3787}
+{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Lasting time of somethin"], "length": 3743}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2594}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 2661}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 3083}
+{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Definition of something"], "length": 2880}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1093}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 3449}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 3301}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Animal"], "length": 1138}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 2636}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 1192}
+{"dataset_name": "trec_e", "pred_str": " Equivalent term\n", "answers": ["Equivalent term"], "length": 3077}
+{"dataset_name": "trec_e", "pred_str": " Material\n", "answers": ["Element and substance"], "length": 815}
+{"dataset_name": "trec_e", "pred_str": " Description of a person\n", "answers": ["Description of something"], "length": 3174}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1323}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 1967}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 3586}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 3193}
+{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"], "length": 1040}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 3454}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 1299}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 3925}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 3609}
+{"dataset_name": "trec_e", "pred_str": " Country\n", "answers": ["Country"], "length": 1045}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Manner of an action"], "length": 2824}
+{"dataset_name": "trec_e", "pred_str": " Invention, book and other creative piece\n", "answers": ["Other entity"], "length": 2270}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 2378}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Element and substance"], "length": 1990}
+{"dataset_name": "trec_e", "pred_str": " Other celestial body\n", "answers": ["Other location"], "length": 808}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2640}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2235}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 2430}
+{"dataset_name": "trec_e", "pred_str": " Invention, book and other creative piece\n", "answers": ["Group or organization of person"], "length": 1128}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2078}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Lasting time of somethin"], "length": 2544}
+{"dataset_name": "trec_e", "pred_str": " Currency\n", "answers": ["Currency name"], "length": 1626}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 2866}
+{"dataset_name": "trec_e", "pred_str": " Age\n", "answers": ["Lasting time of somethin"], "length": 2655}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Vehicle"], "length": 2212}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 3494}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 2907}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 3320}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 987}
+{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"], "length": 3519}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other entity"], "length": 1395}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1563}
+{"dataset_name": "trec_e", "pred_str": " Vehicle\n", "answers": ["Vehicle"], "length": 1610}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"], "length": 3304}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 1619}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 3981}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 1017}
+{"dataset_name": "trec_e", "pred_str": " Price\n", "answers": ["Other entity"], "length": 2714}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"], "length": 2815}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Currency name"], "length": 3872}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 3630}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 1272}
+{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"], "length": 1322}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Plant"], "length": 2738}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 3201}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 3034}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 1154}
+{"dataset_name": "trec_e", "pred_str": " Manner of an action\n", "answers": ["Manner of an action"], "length": 2316}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 2941}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 3238}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Description of a person"], "length": 2844}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 1764}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Vehicle"], "length": 2112}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"], "length": 6430}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other number"], "length": 4870}
+{"dataset_name": "trec_e", "pred_str": " State\n", "answers": ["State"], "length": 4049}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 5037}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 6569}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"], "length": 6613}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Equivalent term"], "length": 6823}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"], "length": 7790}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 4190}
+{"dataset_name": "trec_e", "pred_str": " Techniques and method\n", "answers": ["Techniques and method"], "length": 5376}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Product"], "length": 5032}
+{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"], "length": 6393}
+{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"], "length": 7362}
+{"dataset_name": "trec_e", "pred_str": " Organ of body\n", "answers": ["Reason"], "length": 4314}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 7138}
+{"dataset_name": "trec_e", "pred_str": " Language\n", "answers": ["Language"], "length": 4835}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 7783}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 4371}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Other entity"], "length": 7718}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Equivalent term"], "length": 5118}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 6884}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 5754}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 4214}
+{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Definition of something"], "length": 5142}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 5540}
+{"dataset_name": "trec_e", "pred_str": " Mountain\n", "answers": ["Mountain"], "length": 7188}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 7250}
+{"dataset_name": "trec_e", "pred_str": " Plant\n", "answers": ["Plant"], "length": 4241}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 6672}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Percent, fraction"], "length": 7299}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"], "length": 5440}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 4642}
+{"dataset_name": "trec_e", "pred_str": " Continent\n", "answers": ["Other location"], "length": 4814}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 4255}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 5236}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 5810}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 7383}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 7433}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 7085}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 5062}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 5747}
+{"dataset_name": "trec_e", "pred_str": " Currency name\n", "answers": ["Currency name"], "length": 7876}
+{"dataset_name": "trec_e", "pred_str": " State\n", "answers": ["State"], "length": 4094}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Musical instrument"], "length": 7394}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 4605}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Currency name"], "length": 6085}
+{"dataset_name": "trec_e", "pred_str": " Techniques and method\n", "answers": ["Definition of something"], "length": 7877}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 6622}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 6615}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 5134}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 6401}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 6038}
+{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Other number"], "length": 7983}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 7624}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 6399}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 4799}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 4562}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 7701}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 7071}
+{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Definition of something"], "length": 6112}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 5620}
+{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Other number"], "length": 5430}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 6381}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Other number"], "length": 5849}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Price"], "length": 4524}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 6505}
+{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Definition of something"], "length": 5328}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 6842}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 7702}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Temperature"], "length": 7271}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 5317}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Disease and medicine"], "length": 4711}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 5695}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 7264}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Other entity"], "length": 5866}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 6594}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 6356}
+{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"], "length": 6795}
+{"dataset_name": "trec_e", "pred_str": " Manner of an action\n", "answers": ["Description of something"], "length": 5353}
+{"dataset_name": "trec_e", "pred_str": " Country\n", "answers": ["Country"], "length": 4702}
+{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"], "length": 4501}
+{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Lasting time of somethin"], "length": 6553}
+{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"], "length": 4161}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 7877}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other number"], "length": 4372}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 6451}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 7331}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 4194}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Event"], "length": 5424}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 4973}
+{"dataset_name": "trec_e", "pred_str": " Temperature\n", "answers": ["Temperature"], "length": 7797}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 5778}
+{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"], "length": 6928}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 4022}
+{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"], "length": 5653}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 6215}
+{"dataset_name": "trec_e", "pred_str": " Speed\n", "answers": ["Speed"], "length": 6073}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 4038}
+{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"], "length": 6630}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 6009}
+{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Group or organization of person"], "length": 8735}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Other number"], "length": 12604}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 12284}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 10644}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Equivalent term"], "length": 11578}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 10730}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 9264}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 11731}
+{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"], "length": 8710}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 12631}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Element and substance"], "length": 12375}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 12029}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 10508}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 8785}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Product"], "length": 8963}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 8020}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 9447}
+{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Group or organization of person"], "length": 9384}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 12802}
+{"dataset_name": "trec_e", "pred_str": " Temperature\n", "answers": ["Temperature"], "length": 10269}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 9589}
+{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"], "length": 12633}
+{"dataset_name": "trec_e", "pred_str": " Speed\n", "answers": ["Speed"], "length": 13034}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 9492}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["City"], "length": 10670}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 9045}
+{"dataset_name": "trec_e", "pred_str": " Equivalent term\n", "answers": ["Individual"], "length": 8932}
+{"dataset_name": "trec_e", "pred_str": " Currency name\n", "answers": ["Currency name"], "length": 9449}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Number of something"], "length": 11013}
+{"dataset_name": "trec_e", "pred_str": " Other number\n", "answers": ["Temperature"], "length": 8991}
+{"dataset_name": "trec_e", "pred_str": " Other entity\n", "answers": ["Definition of something"], "length": 12683}
+{"dataset_name": "trec_e", "pred_str": " Invention, book and other creative piece\n", "answers": ["City"], "length": 8611}
+{"dataset_name": "trec_e", "pred_str": " Reason\n", "answers": ["Reason"], "length": 8543}
+{"dataset_name": "trec_e", "pred_str": " Element and substance\n", "answers": ["Element and substance"], "length": 11312}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 8132}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 9757}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 12921}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 12622}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 12580}
+{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Group or organization of person"], "length": 10494}
+{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"], "length": 9454}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 11531}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 12599}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 12462}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 8458}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 8793}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 12862}
+{"dataset_name": "trec_e", "pred_str": " Event\n", "answers": ["Definition of something"], "length": 9226}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 11980}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 8864}
+{"dataset_name": "trec_e", "pred_str": " Food\n", "answers": ["Element and substance"], "length": 9011}
+{"dataset_name": "trec_e", "pred_str": " Description of something\n", "answers": ["Description of something"], "length": 9218}
+{"dataset_name": "trec_e", "pred_str": " Group or organization of person\n", "answers": ["Animal"], "length": 12100}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 9256}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"], "length": 8553}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 10231}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Other number"], "length": 9643}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 10446}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 10920}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 11240}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Mountain"], "length": 9733}
+{"dataset_name": "trec_e", "pred_str": " Animal\n", "answers": ["Animal"], "length": 10354}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 10362}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 12916}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 8725}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other entity"], "length": 10380}
+{"dataset_name": "trec_e", "pred_str": " Color\n", "answers": ["Color"], "length": 8820}
+{"dataset_name": "trec_e", "pred_str": " Currency name\n", "answers": ["Currency name"], "length": 8357}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 8216}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Weight"], "length": 13237}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 11040}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 10149}
+{"dataset_name": "trec_e", "pred_str": " Lasting time of somethin\n", "answers": ["Lasting time of somethin"], "length": 9699}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 8058}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 9442}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 8493}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 11065}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 9577}
+{"dataset_name": "trec_e", "pred_str": " Number of something\n", "answers": ["Other entity"], "length": 8620}
+{"dataset_name": "trec_e", "pred_str": " State\n", "answers": ["State"], "length": 11000}
+{"dataset_name": "trec_e", "pred_str": " Plant\n", "answers": ["Plant"], "length": 10371}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 12613}
+{"dataset_name": "trec_e", "pred_str": " Expression abbreviated\n", "answers": ["Expression abbreviated"], "length": 8325}
+{"dataset_name": "trec_e", "pred_str": " Sport\n", "answers": ["Sport"], "length": 11953}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 11425}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 12055}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 9900}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 10452}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other location"], "length": 9536}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 12313}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 8757}
+{"dataset_name": "trec_e", "pred_str": " Distance, linear measure\n", "answers": ["Distance, linear measure"], "length": 8793}
+{"dataset_name": "trec_e", "pred_str": " Definition of something\n", "answers": ["Definition of something"], "length": 10576}
+{"dataset_name": "trec_e", "pred_str": " Disease and medicine\n", "answers": ["Definition of something"], "length": 12806}
+{"dataset_name": "trec_e", "pred_str": " Individual\n", "answers": ["Individual"], "length": 11268}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 12454}
+{"dataset_name": "trec_e", "pred_str": " Other location\n", "answers": ["Other entity"], "length": 11933}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 10407}
+{"dataset_name": "trec_e", "pred_str": " City\n", "answers": ["City"], "length": 11425}
+{"dataset_name": "trec_e", "pred_str": " Date\n", "answers": ["Date"], "length": 10267}

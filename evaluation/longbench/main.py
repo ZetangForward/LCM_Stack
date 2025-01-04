@@ -7,6 +7,7 @@ import torch.multiprocessing as mp
 import numpy as np
 from loguru import logger
 from peft import PeftModelForCausalLM
+import os
 
 context_max_length = {"8k_setting": 7200, "tiny_setting": 15500, "normal_setting": 32000, "long_setting": 63500, "ultra_long_setting": 127500}
 
@@ -104,6 +105,7 @@ if __name__ == "__main__":
     parser.add_argument('--model_path', type=str, default=None, help='Path to the model')
     parser.add_argument('--adapter_path', type=str, default=None, help='Path to the PEFT model')
     parser.add_argument('--save_path', type=str, default=None, help='Path to save the output')
+    parser.add_argument('--tag', type=str, default=None, help='output_dir tag')
     parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
 
@@ -114,11 +116,14 @@ if __name__ == "__main__":
     
     log_c(f'begin to eval on {world_size} gpus ...')
     
-    if args.adapter_path:
-        suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-1]}"
-        pred_dir = os.path.join(args.save_path, suffix_tag)
+    if args.tag:
+        pred_dir = os.path.join(args.save_path, args.tag)
     else:
-        pred_dir = os.path.join(args.save_path, "vanilla")
+        if args.adapter_path:
+            suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-1]}"
+            pred_dir = os.path.join(args.save_path, suffix_tag)
+        else:
+            pred_dir = os.path.join(args.save_path, "vanilla")
     
     if os.path.exists(pred_dir):
         already_finish_files = auto_read_dir(pred_dir, file_suffix=".jsonl")
@@ -168,3 +173,17 @@ if __name__ == "__main__":
         results = list(return_list)
 
         auto_save_data(results, save_res_path)
+
+    # 最后一起进行评测
+    logger.info("start to eval ...")
+    # 定义命令字符串
+    command = f'python eval.py --pred_path={pred_dir}'
+
+    # 执行命令
+    exit_code = os.system(command)
+
+    # 检查命令是否成功执行
+    if exit_code == 0:
+        print("命令执行成功！")
+    else:
+        print(f"命令执行失败，退出码：{exit_code}")

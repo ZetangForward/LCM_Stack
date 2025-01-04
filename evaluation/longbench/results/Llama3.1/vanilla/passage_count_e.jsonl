@@ -1,300 +1,300 @@
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "3\n\nAfter removing duplicates, the unique paragraphs are:\n\n1. Siddhashrama (; Devanagari:\u0938\u093f\u0926\u094d\u0927\u093e\u0936\u094d\u0930\u092e), popularly called G", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["16"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "3\n\nAfter removing duplicates, the unique paragraphs are:\n\n1. Some proponents of TL loudspeakers consider that using a TL is the theoretical ideal manner in which", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "3\n\nThe paragraphs that are duplicates are:\n\n- Paragraph 1 and Paragraph 2\n", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "1", "answers": ["16"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["22"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["21"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["16"]}
-{"dataset_name": "passage_count_e", "pred_str": "3\n\nThe paragraphs can be grouped into the following categories:\n\n- Paragraphs 1, 5, 9, 11, 12, 17", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3\n\nAfter removing duplicates, the unique paragraphs are:\n\n1. In the following years, Epirus faced the growing threat of the expansionist Roman Republic,", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["19"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 11 unique paragraphs.", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["19"]}
-{"dataset_name": "passage_count_e", "pred_str": "1 \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["19"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["23"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["22"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["26"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["25"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["21"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["29"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["30"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["26"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["17"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["4"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["22"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["16"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"]}
-{"dataset_name": "passage_count_e", "pred_str": "After removing duplicates, there are 7 unique paragraphs.", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["10"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["30"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. Due to his mother's views, Leonard never celebrated his birthday or Christmas when he was a child, and when she visited him she was not impressed with", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["28"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "1", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["15"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["27"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["8"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"]}
-{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["9"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["6"]}
-{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["22"]}
-{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["29"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["22"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["12"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["26"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["13"]}
-{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["11"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["19"]}
-{"dataset_name": "passage_count_e", "pred_str": "1. \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["26"]}
-{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"]}
-{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["18"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["24"]}
-{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["18"]}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"], "length": 3324}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"], "length": 3202}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"], "length": 2257}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"], "length": 3487}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["8"], "length": 2904}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 1488}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 3080}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 3453}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"], "length": 3911}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"], "length": 2291}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["17"], "length": 3923}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"], "length": 3413}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 3735}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 2792}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 2472}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 2989}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["14"], "length": 3388}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 2124}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 3102}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 3592}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 3990}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 3127}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"], "length": 2594}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 3592}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"], "length": 3966}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 3741}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"], "length": 1906}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["15"], "length": 3977}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"], "length": 3188}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 3404}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"], "length": 1407}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"], "length": 2383}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 2953}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["11"], "length": 3276}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"], "length": 3286}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["8"], "length": 3845}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["11"], "length": 3153}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"], "length": 3480}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 3615}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"], "length": 3667}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["4"], "length": 1973}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 3503}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 3053}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["8"], "length": 3034}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"], "length": 3299}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"], "length": 3757}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 3328}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"], "length": 3758}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"], "length": 2179}
+{"dataset_name": "passage_count_e", "pred_str": "3\n\nAfter removing duplicates, the unique paragraphs are:\n\n1. Siddhashrama (; Devanagari:\u0938\u093f\u0926\u094d\u0927\u093e\u0936\u094d\u0930\u092e), popularly called G", "answers": ["7"], "length": 3450}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 3293}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 3849}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["6"], "length": 3450}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 1940}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"], "length": 3746}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 2906}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 2855}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["4"], "length": 3857}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 3516}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 2138}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"], "length": 2375}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"], "length": 2028}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["3"], "length": 3076}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"], "length": 3830}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"], "length": 2836}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["2"], "length": 2567}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 2609}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["8"], "length": 2971}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"], "length": 2753}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"], "length": 2914}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 3169}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"], "length": 2879}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["16"], "length": 3773}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"], "length": 2737}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"], "length": 1851}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"], "length": 2055}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 3873}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 3262}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 3644}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 2725}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 3805}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 3637}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["4"], "length": 3359}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["11"], "length": 3031}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 3900}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["8"], "length": 3634}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 2731}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 3963}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"], "length": 1627}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["14"], "length": 3929}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 3569}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"], "length": 3170}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"], "length": 3120}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"], "length": 3602}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["2"], "length": 2012}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 3519}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 3459}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"], "length": 3224}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["13"], "length": 3916}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"], "length": 3541}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"], "length": 5080}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["13"], "length": 5968}
+{"dataset_name": "passage_count_e", "pred_str": "3\n\nAfter removing duplicates, the unique paragraphs are:\n\n1. Some proponents of TL loudspeakers consider that using a TL is the theoretical ideal manner in which", "answers": ["6"], "length": 4826}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["8"], "length": 7562}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"], "length": 6563}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"], "length": 7066}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["11"], "length": 7154}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["3"], "length": 4831}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["15"], "length": 5904}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"], "length": 5199}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["10"], "length": 4471}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 7079}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"], "length": 5738}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 5177}
+{"dataset_name": "passage_count_e", "pred_str": "3\n\nThe paragraphs that are duplicates are:\n\n- Paragraph 1 and Paragraph 2\n", "answers": ["4"], "length": 5814}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"], "length": 7657}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 4631}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 5469}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 4876}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["7"], "length": 5228}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"], "length": 5636}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 6154}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["9"], "length": 7804}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["18"], "length": 6496}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["10"], "length": 6762}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["20"], "length": 6039}
+{"dataset_name": "passage_count_e", "pred_str": "1", "answers": ["16"], "length": 4256}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["8"], "length": 7217}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["12"], "length": 4987}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["9"], "length": 6250}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["3"], "length": 6770}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"], "length": 6245}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["12"], "length": 6293}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"], "length": 5154}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["18"], "length": 4432}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 4674}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"], "length": 6726}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"], "length": 4261}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"], "length": 7147}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["22"], "length": 6252}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["14"], "length": 4690}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 4069}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["4"], "length": 6407}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"], "length": 4196}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["21"], "length": 6597}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["8"], "length": 6381}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"], "length": 5795}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["17"], "length": 4713}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 6738}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"], "length": 4930}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 6491}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["7"], "length": 4538}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 6257}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 7229}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["16"], "length": 5182}
+{"dataset_name": "passage_count_e", "pred_str": "3\n\nThe paragraphs can be grouped into the following categories:\n\n- Paragraphs 1, 5, 9, 11, 12, 17", "answers": ["5"], "length": 4523}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["7"], "length": 4295}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"], "length": 5948}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["8"], "length": 4692}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 5798}
+{"dataset_name": "passage_count_e", "pred_str": "3\n\nAfter removing duplicates, the unique paragraphs are:\n\n1. In the following years, Epirus faced the growing threat of the expansionist Roman Republic,", "answers": ["5"], "length": 5341}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"], "length": 5078}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"], "length": 6087}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 4588}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"], "length": 7520}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["10"], "length": 5686}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["15"], "length": 6538}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["7"], "length": 6445}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"], "length": 4855}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["6"], "length": 4831}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["9"], "length": 4527}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 4576}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["18"], "length": 7561}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"], "length": 6803}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["11"], "length": 4504}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["19"], "length": 7410}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["5"], "length": 4978}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 7285}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["5"], "length": 6779}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"], "length": 7358}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["9"], "length": 4073}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["18"], "length": 6737}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"], "length": 4783}
+{"dataset_name": "passage_count_e", "pred_str": "4", "answers": ["7"], "length": 4248}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"], "length": 6007}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"], "length": 7392}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 11 unique paragraphs.", "answers": ["15"], "length": 6347}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["8"], "length": 6910}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["11"], "length": 7198}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["10"], "length": 4638}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"], "length": 6540}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["19"], "length": 7346}
+{"dataset_name": "passage_count_e", "pred_str": "1 \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["13"], "length": 6597}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["9"], "length": 6934}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["9"], "length": 4287}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["13"], "length": 5715}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["14"], "length": 6301}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["8"], "length": 6709}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["19"], "length": 7683}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 7505}
+{"dataset_name": "passage_count_e", "pred_str": "3", "answers": ["3"], "length": 8657}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["17"], "length": 8402}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["18"], "length": 8602}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["6"], "length": 8559}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"], "length": 8579}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["23"], "length": 8263}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["18"], "length": 9229}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["15"], "length": 9457}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["15"], "length": 9343}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["22"], "length": 9421}
+{"dataset_name": "passage_count_e", "pred_str": "1. \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["26"], "length": 10930}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["6"], "length": 9452}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["14"], "length": 8078}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["18"], "length": 9464}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 14537}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"], "length": 8945}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["4"], "length": 8762}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["24"], "length": 9775}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["25"], "length": 9031}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["10"], "length": 9999}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["15"], "length": 10235}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 8606}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["24"], "length": 8294}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["17"], "length": 8947}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["11"], "length": 9620}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"], "length": 11716}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["17"], "length": 8302}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["17"], "length": 8195}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["13"], "length": 10708}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["15"], "length": 8257}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["20"], "length": 9017}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["21"], "length": 8698}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["24"], "length": 8334}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["7"], "length": 8108}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["15"], "length": 9051}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["12"], "length": 8716}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["13"], "length": 8995}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["29"], "length": 10039}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["11"], "length": 8352}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["30"], "length": 9681}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"], "length": 10058}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["12"], "length": 11296}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["24"], "length": 8329}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"], "length": 9199}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["11"], "length": 9365}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 9245}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["6"], "length": 11832}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["20"], "length": 9904}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["15"], "length": 8089}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["26"], "length": 9587}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["17"], "length": 9763}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["7"], "length": 8123}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["4"], "length": 8809}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["8"], "length": 9044}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["22"], "length": 8393}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["14"], "length": 9224}
+{"dataset_name": "passage_count_e", "pred_str": "1. \nAfter removing duplicates, there are 1 unique paragraphs.", "answers": ["24"], "length": 8844}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["16"], "length": 8534}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["3"], "length": 9720}
+{"dataset_name": "passage_count_e", "pred_str": "After removing duplicates, there are 7 unique paragraphs.", "answers": ["12"], "length": 8803}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"], "length": 12180}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["13"], "length": 9896}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["10"], "length": 8745}
+{"dataset_name": "passage_count_e", "pred_str": "1. \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["2"], "length": 12317}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["14"], "length": 9506}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["30"], "length": 8555}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["8"], "length": 9453}
+{"dataset_name": "passage_count_e", "pred_str": "1. Due to his mother's views, Leonard never celebrated his birthday or Christmas when he was a child, and when she visited him she was not impressed with", "answers": ["11"], "length": 8265}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 9318}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 8121}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["28"], "length": 8451}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["24"], "length": 8386}
+{"dataset_name": "passage_count_e", "pred_str": "1", "answers": ["7"], "length": 12724}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["6"], "length": 8572}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"], "length": 8524}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["15"], "length": 8351}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["27"], "length": 8016}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["8"], "length": 9442}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["20"], "length": 8951}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["14"], "length": 9763}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["7"], "length": 9759}
+{"dataset_name": "passage_count_e", "pred_str": "5", "answers": ["9"], "length": 9137}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["6"], "length": 10249}
+{"dataset_name": "passage_count_e", "pred_str": "2", "answers": ["2"], "length": 8941}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["22"], "length": 8514}
+{"dataset_name": "passage_count_e", "pred_str": "7", "answers": ["11"], "length": 8152}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["12"], "length": 8688}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"], "length": 8498}
+{"dataset_name": "passage_count_e", "pred_str": "14", "answers": ["29"], "length": 8645}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["22"], "length": 11162}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["12"], "length": 10081}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["26"], "length": 10280}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["13"], "length": 8684}
+{"dataset_name": "passage_count_e", "pred_str": "9", "answers": ["11"], "length": 13417}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["19"], "length": 8691}
+{"dataset_name": "passage_count_e", "pred_str": "1. \n\nAfter removing duplicates, there is only 1 unique paragraph.", "answers": ["26"], "length": 11059}
+{"dataset_name": "passage_count_e", "pred_str": "6", "answers": ["5"], "length": 8434}
+{"dataset_name": "passage_count_e", "pred_str": "8", "answers": ["18"], "length": 8701}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["24"], "length": 10126}
+{"dataset_name": "passage_count_e", "pred_str": "1\n", "answers": ["18"], "length": 9867}
