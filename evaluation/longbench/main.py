@@ -46,7 +46,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
         for sample in datasets:
             if hasattr(test_model, "memory"):
                 test_model.memory.reset()
-
+            torch.cuda.empty_cache()
             context, input_, answers = sample['context'], sample['input'], sample['answers']
             if  "length" in sample:
                 length = sample["length"]
@@ -62,7 +62,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
 
             max_context_length = max_context_length - PRED_LENGTH - 100 # for chat template
-            if textual_input.size(-1) > max_context_length:
+            if len(textual_input) > max_context_length:
                 half = int(max_context_length/2)
                 prompt = tokenizer.decode(textual_input[:half], skip_special_tokens=True) + tokenizer.decode(textual_input[-half:], skip_special_tokens=True)
 
@@ -74,7 +74,8 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                     max_new_tokens=PRED_LENGTH, 
                     do_sample=None,
                     begin_suppress_tokens=eos_token_id,
-                    eos_token_id=eos_token_id, temperature=None,
+                    eos_token_id=eos_token_id, 
+                    temperature=None,
                     top_p=None,
                 )[0]
             elif dataset_name in ['gov_report_e', 'qmsum_e', 'multi_news_e']:
