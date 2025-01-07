@@ -21,11 +21,12 @@ def seed_everything(seed):
 
 
 def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, max_context_length=None, return_list=None):
-    
+    os.environ["CUDA_VISIBLE_DEVICES"] = rank
     logger.info(f"rank {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", trust_remote_code=True).to(torch.device(f'cuda:{rank}'))
+    logger.info(f"rank {rank} 开始加载模型 ...")
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
     if adapter_path:
         test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
 
@@ -33,6 +34,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
         eos_token_id = test_model.generation_config.eos_token_id
     else:
         eos_token_id = tokenizer.eos_token_id
+
     if isinstance(eos_token_id, int):
         eos_token_id = [eos_token_id]
         
@@ -60,7 +62,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
 
             max_context_length = max_context_length - PRED_LENGTH - 100 # for chat template
-            if len(textual_input) > max_context_length:
+            if textual_input.size(-1) > max_context_length:
                 half = int(max_context_length/2)
                 prompt = tokenizer.decode(textual_input[:half], skip_special_tokens=True) + tokenizer.decode(textual_input[-half:], skip_special_tokens=True)
 
@@ -105,17 +107,24 @@ if __name__ == "__main__":
     parser.add_argument('--model_path', type=str, default=None, help='Path to the model')
     parser.add_argument('--adapter_path', type=str, default=None, help='Path to the PEFT model')
     parser.add_argument('--save_path', type=str, default=None, help='Path to save the output')
+    parser.add_argument('--gpu_lst', type=str, default=None, help='All available gpus')
+    parser.add_argument('--tp_size', type=int, default=1, help='model parallel size')
     parser.add_argument('--tag', type=str, default=None, help='output_dir tag')
     parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
 
     args = parser.parse_args()
     
-    world_size = torch.cuda.device_count()
     mp.set_start_method('spawn', force=True)
-    
-    log_c(f'begin to eval on {world_size} gpus ...')
-    
+
+    all_gpu_list = args.gpu_lst.split(',')
+    logger.info(f'begin to eval on {len(all_gpu_list)} gpus | tensor parallel size is {args.tp_size}...')
+    split_gpu_list = []
+    for i in range(0, len(all_gpu_list), args.tp_size):
+        split_gpu_list.append(",".join(all_gpu_list[i:i+args.tp_size]))
+
+    world_size = len(split_gpu_list)
+
     if args.tag:
         pred_dir = os.path.join(args.save_path, args.tag)
     else:
@@ -161,10 +170,11 @@ if __name__ == "__main__":
             manager = mp.Manager()
             return_list = manager.list()
              
-            for rank in range(world_size):
-                p = mp.Process(target=get_pred, args=(rank, args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, return_list))
+            for rank in range(0, world_size):
+                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, return_list))
                 p.start()
                 processes.append(p)
+                time.sleep(5)
             
             for p in processes:
                 p.join()
