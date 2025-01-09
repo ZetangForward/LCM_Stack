@@ -68,6 +68,8 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
 
             input_ids = tokenizer(prompt, return_tensors="pt").to(test_model.device).input_ids
 
+            print(f"context length: {input_ids.size(-1)}")
+
             if dataset_name in ["2wikimqa_e", "hotpotqa_e", "musique_e", "multifieldqa_en_e", "qasper_e", "narrativeqa_e", "samsum_e"]:
                 outputs = test_model.generate(
                     input_ids, 
@@ -78,18 +80,11 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                     temperature=None,
                     top_p=None,
                 )[0]
-            elif dataset_name in ['gov_report_e', 'qmsum_e', 'multi_news_e']:
-                outputs = test_model.generate(
-                    input_ids,
-                    max_new_tokens=PRED_LENGTH,
-                    num_beams=1,
-                    do_sample=False,
-                    temperature=1.0,
-                )[0]
             else:
                 outputs = test_model.generate(
                     input_ids,
                     max_new_tokens=PRED_LENGTH,
+                    eos_token_id=eos_token_id,
                     num_beams=1,
                     do_sample=False,
                     temperature=1.0,
