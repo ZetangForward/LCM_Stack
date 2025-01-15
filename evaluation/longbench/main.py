@@ -22,7 +22,7 @@ def seed_everything(seed):
 
 def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, max_context_length=None, return_list=None):
     os.environ["CUDA_VISIBLE_DEVICES"] = rank
-    logger.info(f"rank {rank} is processing {dataset_name} length {len(datasets)} ...")
+    logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     logger.info(f"rank {rank} 开始加载模型 ...")
