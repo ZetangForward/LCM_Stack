@@ -20,7 +20,7 @@ def seed_everything(seed):
     torch.backends.cudnn.deterministic = True
 
 
-def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, max_context_length=None, return_list=None):
+def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, max_context_length=None, is_chat_model=False, return_list=None):
     os.environ["CUDA_VISIBLE_DEVICES"] = rank
     logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
@@ -53,7 +53,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
             else:
                 length = 0
             prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
-            if not DATASET2CATEGORY[dataset_name] in ["EN Few-Shot Learning", "Code Completion"]:
+            if (not DATASET2CATEGORY[dataset_name] in ["EN Few-Shot Learning", "Code Completion"]) and is_chat_model:
                 prompt = tokenizer.apply_chat_template(
                     [{'role': 'user', 'content': prompt}],
                     add_generation_prompt=True, tokenize=False
@@ -61,14 +61,17 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
 
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
 
-            max_context_length = max_context_length - PRED_LENGTH - 100 # for chat template
-            if len(textual_input) > max_context_length:
-                half = int(max_context_length/2)
+            if len(textual_input) > max_context_length - PRED_LENGTH - 100:
+                half = int((max_context_length - PRED_LENGTH - 100)/2)
                 prompt = tokenizer.decode(textual_input[:half], skip_special_tokens=True) + tokenizer.decode(textual_input[-half:], skip_special_tokens=True)
 
             input_ids = tokenizer(prompt, return_tensors="pt").to(test_model.device).input_ids
-
-            print(f"context length: {input_ids.size(-1)}")
+            if input_ids.size(-1) == 0:
+                print("=============")
+                print(f"textual_input.shape {textual_input.shape}")
+                print(f"max_context_length {max_context_length}")
+                print("=============")
+            print(f"context length: {input_ids.shape}")
 
             if dataset_name in ["2wikimqa_e", "hotpotqa_e", "musique_e", "multifieldqa_en_e", "qasper_e", "narrativeqa_e", "samsum_e"]:
                 outputs = test_model.generate(
@@ -106,6 +109,7 @@ if __name__ == "__main__":
     parser.add_argument('--gpu_lst', type=str, default=None, help='All available gpus')
     parser.add_argument('--tp_size', type=int, default=1, help='model parallel size')
     parser.add_argument('--tag', type=str, default=None, help='output_dir tag')
+    parser.add_argument('--chat_model', action='store_true')
     parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
 
@@ -135,7 +139,7 @@ if __name__ == "__main__":
         already_finish_files = [os.path.basename(f).split('.')[0] for f in already_finish_files]
         
         # check generated cases
-        for f in already_finish_files:
+        for f in already_finish_files[::-1]:
             num_test_cases = len(load_dataset('THUDM/LongBench', f, split='test'))
             num_pred_cases = len(auto_read_data(os.path.join(pred_dir, f + ".jsonl")))
             if num_test_cases != num_pred_cases: 
@@ -167,7 +171,7 @@ if __name__ == "__main__":
             return_list = manager.list()
              
             for rank in range(0, world_size):
-                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, return_list))
+                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, args.chat_model, return_list))
                 p.start()
                 processes.append(p)
                 time.sleep(5)

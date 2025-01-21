@@ -8,24 +8,6 @@ from loguru import logger
 from utils import DATASET2METRICS, ALL_LB_TESTING_SETS, DATASET2MAXNEWTOKENS
 from datasets import load_dataset
 
-def parse_args(args=None):
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default=None)
-    parser.add_argument('--e', action='store_true', help="Evaluate on LongBench-E")
-    return parser.parse_args(args)
-
-import os
-import json
-import argparse
-import numpy as np
-
-
-def parse_args(args=None):
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default=None)
-    parser.add_argument('--e', action='store_true', help="Evaluate on LongBench-E")
-    return parser.parse_args(args)
-
 def scorer_e(dataset, predictions, answers, lengths, all_classes):
     scores = {"0-4k": [], "4-8k": [], "8k+": []}
     for (prediction, ground_truths, length) in zip(predictions, answers, lengths):
@@ -98,14 +80,14 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
     columns = [
         ['Single-Document QA', 'Single-Document QA', 'Single-Document QA',
         'Multi-Document QA', 'Multi-Document QA', 'Multi-Document QA', 'Multi-Document QA',
-        'Summarization', 'Summarization', 'Summarization', 'Summarization',
+        'Summarization', 'Summarization', 'Summarization',
         'Few-shot Learning', 'Few-shot Learning', 'Few-shot Learning', 'Few-shot Learning',
         'Synthetic Tasks', 'Synthetic Tasks', 'Synthetic Tasks',
         'Code Completion', 'Code Completion', 'Code Completion', 'ALL Avg.'
         ],
         ['qasper_e', 'multifieldqa_en_e', 'Avg.',
         'hotpotqa_e', '2wikimqa_e', 'musique', 'Avg.',
-        'gov_report_e', 'qmsum_e', 'multi_news_e', 'Avg.',
+        'gov_report_e', 'multi_news_e', 'Avg.',
         'trec_e', 'triviaqa_e', 'samsum_e', 'Avg.',
         'passage_count_e', 'passage_retrieval_en_e', 'Avg.',
         'lcc_e', 'repobench-p_e', 'Avg.', ''
@@ -131,9 +113,11 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
             sorted_df[(col_0, col_1)] = df[col_1]
         else:
             sorted_df[(col_0, col_1)] = 0  # 填充缺失列为 NaN
-    
+
     out_path = os.path.join(pred_path, "result.csv")
     # 保存为 CSV 文件
+    if os.path.exists(out_path):
+        os.remove(out_path)
     sorted_df.to_csv(out_path, index=False)
 
 
