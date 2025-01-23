@@ -1,8 +1,9 @@
 python main.py \
-    --model_path="/mnt/hwfile/opendatalab/tangzecheng/local_ckpt/pg19/Llama-3.1-8B/cd_lm_full-0.005/global_step300" \
+    --model_path="/mnt/hwfile/opendatalab/tangzecheng/local_ckpt/baseline/llama3.1-8B-sft/global_step150" \
     --adapter_path="" \
     --gpu_lst="0,1,2,3,4,5,6,7" \
-    --tag="cd_lm_full-0.005" \
+    --tag="baseline_sft" \
+    --chat_template="User: {}\nAssistant: " \
     --model_max_length_setting="normal_setting" \
     --save_path="./results/Llama3.1-8B";
 

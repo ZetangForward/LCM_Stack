@@ -1,8 +1,8 @@
 python main.py \
-    --model_path="Crystalcareai/meta-llama-3.1-8b" \
+    --model_path="/mnt/hwfile/opendatalab/tangzecheng/local_ckpt/pg19/Llama-3.1-8B/cd_lm_full-0.01/global_step250" \
     --adapter_path="" \
-    --gpu_lst="0,1,3,4" \
-    --tag="" \
+    --gpu_lst="0,1,2,3,4,5,6,7" \
+    --tag="cd_lm_full-0.01" \
     --model_max_length_setting="normal_setting" \
     --save_path="./results/Llama3.1-8B";
 
