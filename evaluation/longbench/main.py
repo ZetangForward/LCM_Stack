@@ -59,7 +59,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                         [{'role': 'user', 'content': prompt}],
                         add_generation_prompt=True, tokenize=False
                     )
-                else:
+                elif chat_template is not None:
                     prompt = chat_template.format(prompt)
 
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
