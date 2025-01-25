@@ -40,8 +40,8 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
         file_path = os.path.join(pred_path, file_name)
         datas = auto_read_data(file_path)
         
-        output[file_name] = ([0, 0, 0, 0, 0], 
-                             [0, 0, 0, 0, 0])
+        output[file_name] = ([0, 0, 0, 0, 0, 0], 
+                             [0, 0, 0, 0, 0, 0])
 
         for pred in datas:
             
@@ -88,7 +88,7 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
         
 
 
-    overall_list = ([0, 0, 0, 0, 0], [0, 0, 0, 0, 0])
+    overall_list = ([0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0])
 
     for k in output.values():
         for i in range(len(k[0])):
@@ -101,16 +101,6 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
     result = {k:[] for k in output.keys()}
     for k in output.keys():
         result[k] = [output[k][0][i]/max(1, output[k][1][i]) for i in range(len(output[k][0]))]
-
-    
             
         # name = '.'.join(file_name.split('.')[:-1])
     pd.DataFrame(result).to_csv(f"{pred_path}/result.csv")
-
-
-
-
-
-if __name__ == '__main__':
-    Fire(main)
-    log_c("evaluation finish")
