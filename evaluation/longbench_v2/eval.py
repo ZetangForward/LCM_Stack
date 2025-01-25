@@ -81,7 +81,7 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
             overall += 1
             overall_acc += acc
 
-            output[file_name][5] += 1
+            output[file_name][0][5] += 1
             output[file_name][1][5] += 1
 
             assert pred["length"].lower() != "long"
