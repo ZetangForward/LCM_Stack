@@ -18,26 +18,31 @@ def extract_answer(response):
             return None
 
 def main(pred_path: str = None, benchmark_dataset_path: str = None):
-    scores = {"index": [],
-              "length":[],
-              "task":[],
-              'pred':[],
-              'golden':[],
-              "score":[]}
+
     all_files = os.listdir(pred_path)
-    output = ["Model\tOverall\tEasy\tHard\tShort\tMedium\tLong"]
-    easy, hard, short, medium, long = 0, 0, 0, 0, 0
-    easy_acc, hard_acc, short_acc, medium_acc, long_acc = 0, 0, 0, 0, 0
-    all_datas_l = 0
+    # output = {
+    #     "Easy":[],
+    #     "Hard":[],
+    #     "Short":[],
+    #     "Medium":[],
+    #     "Overall":[]
+    # }
+
+    output = {}
+    easy, hard, short, medium ,overall= 0, 0, 0, 0, 0
+    easy_acc, hard_acc, short_acc, medium_acc, overall_acc = 0, 0, 0, 0, 0
+
     for file_name in all_files:
         if ".jsonl" not in file_name:continue
         task = file_name.split('.')[0]
-        
 
+        
         file_path = os.path.join(pred_path, file_name)
-        # print(file_path)
         datas = auto_read_data(file_path)
-        all_datas_l += len(datas)
+        
+        output[file_name] = ([0, 0, 0, 0, 0], 
+                             [0, 0, 0, 0, 0])
+
         for pred in datas:
             
             acc = int(pred['judge'])
@@ -45,32 +50,62 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
             if pred["difficulty"] == "easy":
                 easy += 1
                 easy_acc += acc
+                
+                output[file_name][0][0] += 1
+                output[file_name][1][0] += 1
+                
             else:
                 hard += 1
                 hard_acc += acc
 
+                output[file_name][1] += 1
+                output[file_name][1][1] += 1
+            
+
+
             if pred['length'] == "short":
                 short += 1
                 short_acc += acc
+                
+                output[file_name][2] += 1
+                output[file_name][1][2] += 1
+
+
             elif pred['length'] == "medium":
                 medium += 1
                 medium_acc += acc
-            else:
-                long += 1
-                long_acc += acc
 
-    easy = max(easy, 1)
-    hard = max(hard, 1)
-    short = max(short, 1)
-    medium = max(medium, 1)
-    long = max(long, 1)
+                output[file_name][3] += 1
+                output[file_name][1][3] += 1
+
+            overall += 1
+            overall_acc += acc
+
+            output[file_name][5] += 1
+            output[file_name][1][5] += 1
+
+            assert pred["length"].lower() != "long"
+        
+
+
+    overall_list = ([0, 0, 0, 0, 0], [0, 0, 0, 0, 0])
+
+    for k in output.values():
+        for i in range(len(k[0])):
+            overall_list[0][i] += k[0][i]
+            overall_list[1][i] += k[1][i]
+            
+    output["Overall"] = overall_list
+
+
+    result = {k:[] for k in output.keys()}
+    for k in output.keys():
+        result[k] = [output[k][0][i]/max(1, output[k][1][i]) for i in range(len(output[k][0]))]
+
+    
             
         # name = '.'.join(file_name.split('.')[:-1])
-    output.append("overall"+'\t'+str(round(100*(easy_acc+hard_acc)/all_datas_l, 1))+'\t'+str(round(100*easy_acc/easy, 1))+'\t'+str(round(100*hard_acc/hard, 1))+'\t'+str(round(100*short_acc/short, 1))+'\t'+str(round(100*medium_acc/medium, 1))+'\t'+str(round(100*long_acc/long, 1)))
-
-    
-    open(f'{pred_path}/result.txt', 'w', encoding='utf-8').write('\n'.join(output))
-    
+    pd.DataFrame(result).to_csv(f"{pred_path}/result.csv")
 
 
 

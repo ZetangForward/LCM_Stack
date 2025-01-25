@@ -67,7 +67,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                                                                 replace('$C_C$', sample['choice_C'].strip()).\
                                                                     replace('$C_D$', sample['choice_D'].strip())
 
-            textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
+            textual_input = tokenizer(prompt, return_tensors="pt").input_ids.to(test_model.device)
 
             outputs = test_model.generate(
                 textual_input, 
@@ -83,12 +83,13 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                              "judge": (pred == answers),
                              "context": context[:1000],
                              "length":sample["length"],
-                             "difficulty":sample["difficulty"],
-                             "index":sample["index"]}) 
+                             "difficulty":sample["difficulty"]}) 
             pbar.update(1)
             
     return_list.extend(pred_res)
 
+
+#bash llama3.1-sft.sh
 
 
 if __name__ == "__main__":
@@ -115,7 +116,7 @@ if __name__ == "__main__":
     logger.info(f'begin to eval on {len(all_gpu_list)} gpus | tensor parallel size is {args.tp_size}...')
     split_gpu_list = []
     for i in range(0, len(all_gpu_list), args.tp_size):
-        split_gpu_list.append(",".join(all_gpu_list[i:i+args.tp_size]))
+        split_gpu_list.append(",".join(all_gpu_list[i:i + args.tp_size]))
 
     world_size = len(split_gpu_list)
 
@@ -141,8 +142,11 @@ if __name__ == "__main__":
     else:
         prompts_type = "0shot"
 
-    dataset = load_dataset('THUDM/LongBench-v2', split='train')
+    dataset = load_dataset('/data/pub_data/LongBench-v2', split='train')
     data_all = dataset.filter(lambda x: x['length'] != 'long')
+
+    tokenzier = AutoTokenizer.from_pretrained(args.model_path)
+    data_all = [k for k in data_all if tokenzier(k["context"],return_tensors='pt').input_ids.shape[1]<=128000]
 
 
     test_datasets = ['Code Repository Understanding', 
@@ -164,7 +168,7 @@ if __name__ == "__main__":
             return_list = manager.list()
              
             for rank in range(0, world_size):
-                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], return_list, prompts_type))
+                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, return_list, prompts_type))
                 p.start()
                 processes.append(p)
                 time.sleep(5)
@@ -180,7 +184,7 @@ if __name__ == "__main__":
     # 最后一起进行评测
     logger.info("start to eval ...")
     # 定义命令字符串
-    command = f'python ../eval.py --pred_path={pred_dir}'
+    command = f'python ./eval.py --pred_path={pred_dir}'
 
     # 执行命令
     exit_code = os.system(command)

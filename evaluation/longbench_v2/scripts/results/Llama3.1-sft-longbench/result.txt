@@ -1,2 +1,0 @@
-Model	Overall	Easy	Hard	Short	Medium	Long
-overall	27.2	25.5	28.3	33.9	23.7	23.1
