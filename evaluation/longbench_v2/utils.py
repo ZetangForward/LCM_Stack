@@ -1,4 +1,4 @@
-PRED_LENGTH = 32
+
 TEMPLATES ={
     "0shot":
 '''Please read the following text and answer the question below.
