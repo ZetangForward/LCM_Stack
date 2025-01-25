@@ -4,7 +4,6 @@ from metrics import (
     retrieval_score, count_score, code_sim_score,
 )
 
-
 """
 LONG BENCH DATA SETTING
 """
