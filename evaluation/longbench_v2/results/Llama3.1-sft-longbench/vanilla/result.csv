@@ -1,7 +1,6 @@
 ,Single-Document QA.jsonl,Multi-Document QA.jsonl,Long-dialogue History Understanding.jsonl,Long In-context Learning.jsonl,Long Structured Data Understanding.jsonl,Code Repository Understanding.jsonl,Overall
-0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
-1,1.0,1.0,1.0,1.0,1.0,1.0,1.0
-2,1.0,1.0,1.0,1.0,1.0,1.0,1.0
-3,1.0,1.0,0.0,1.0,1.0,1.0,1.0
-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-5,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+0,0.45,0.48,0.11,0.18,0.0,0.17,0.35
+1,0.3,0.3,0.36,0.17,0.67,0.56,0.31
+2,0.43,0.36,0.25,0.25,0.67,0.45,0.38
+3,0.23,0.32,0.0,0.14,0.0,0.25,0.23
+4,0.35,0.35,0.25,0.17,0.33,0.4,0.32
