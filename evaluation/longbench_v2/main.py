@@ -101,6 +101,7 @@ if __name__ == "__main__":
     parser.add_argument('--tp_size', type=int, default=1, help='model parallel size')
     parser.add_argument('--tag', type=str, default=None, help='output_dir tag')
     parser.add_argument('--chat_template', type=str, default=None, help='chat template')
+    parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
     parser.add_argument("--cot", "-cot", action='store_true') # set to True if using COT
     parser.add_argument("--no_context", "-nc", action='store_true') # set to True if using no context (directly measuring memorization)
@@ -143,11 +144,13 @@ if __name__ == "__main__":
 
     # dataset = load_dataset('/data/pub_data/LongBench-v2', split='train')
     dataset = load_dataset('THUDM/LongBench-v2', split='train')
+    data_all = dataset.filter(lambda x: (x['length'] != 'long') and (len(x['context']) < 128000 * 4))
+
     tokenzier = AutoTokenizer.from_pretrained(args.model_path)
-    data_all = dataset.filter(lambda x: (x['length'] != 'long') and (tokenzier(x["context"],return_tensors='pt').input_ids.shape[1]<=128000))
-
-    # data_all = [k for k in data_all if tokenzier(k["context"],return_tensors='pt').input_ids.shape[1]<=128000]
-
+    new_data = []
+    for sample in tqdm(data_all):
+        if tokenzier(sample['context'], return_tensors='pt').input_ids.shape[1]<=128000:
+            new_data.append(sample)
 
     test_datasets = ['Code Repository Understanding', 
                      'Long In-context Learning',
@@ -157,7 +160,7 @@ if __name__ == "__main__":
                      'Single-Document QA']
 
     for dataset_name in test_datasets:
-        test_data = [k for k in data_all if k['domain'] == dataset_name]
+        test_data = [k for k in new_data if k['domain'] == dataset_name]
         save_res_path = os.path.join(pred_dir, dataset_name + ".jsonl")
 
         data_subsets = list(chunks(test_data, world_size))
@@ -184,7 +187,7 @@ if __name__ == "__main__":
     # 最后一起进行评测
     logger.info("start to eval ...")
     # 定义命令字符串
-    command = f'python ./eval.py --pred_path={pred_dir}'
+    command = f'python eval.py --pred_path={pred_dir}'
 
     # 执行命令
     exit_code = os.system(command)

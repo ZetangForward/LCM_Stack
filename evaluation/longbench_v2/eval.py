@@ -58,7 +58,7 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
                 hard += 1
                 hard_acc += acc
 
-                output[file_name][1] += 1
+                output[file_name][0][1] += 1
                 output[file_name][1][1] += 1
             
 
@@ -67,7 +67,7 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
                 short += 1
                 short_acc += acc
                 
-                output[file_name][2] += 1
+                output[file_name][0][2] += 1
                 output[file_name][1][2] += 1
 
 
@@ -75,7 +75,7 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
                 medium += 1
                 medium_acc += acc
 
-                output[file_name][3] += 1
+                output[file_name][0][3] += 1
                 output[file_name][1][3] += 1
 
             overall += 1

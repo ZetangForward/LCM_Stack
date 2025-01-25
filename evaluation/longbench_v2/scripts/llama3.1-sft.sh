@@ -2,7 +2,7 @@ python ../main.py \
     --model_path="/data/hf_models/Meta-Llama-3.1-8B-Instruct" \
     --adapter_path='' \
     --model_max_length_setting="ultra_long_setting" \
-    --save_path="./results/Llama3.1-sft-longbench";
+    --save_path="./results/Meta-Llama-3.1-8B-Instruct";
 
 # echo "generate finish ..., begin to evaluate ..."
 
