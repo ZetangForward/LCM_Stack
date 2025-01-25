@@ -101,7 +101,6 @@ if __name__ == "__main__":
     parser.add_argument('--tp_size', type=int, default=1, help='model parallel size')
     parser.add_argument('--tag', type=str, default=None, help='output_dir tag')
     parser.add_argument('--chat_template', type=str, default=None, help='chat template')
-    parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
     parser.add_argument("--cot", "-cot", action='store_true') # set to True if using COT
     parser.add_argument("--no_context", "-nc", action='store_true') # set to True if using no context (directly measuring memorization)
@@ -142,11 +141,12 @@ if __name__ == "__main__":
     else:
         prompts_type = "0shot"
 
-    dataset = load_dataset('/data/pub_data/LongBench-v2', split='train')
-    data_all = dataset.filter(lambda x: x['length'] != 'long')
-
+    # dataset = load_dataset('/data/pub_data/LongBench-v2', split='train')
+    dataset = load_dataset('THUDM/LongBench-v2', split='train')
     tokenzier = AutoTokenizer.from_pretrained(args.model_path)
-    data_all = [k for k in data_all if tokenzier(k["context"],return_tensors='pt').input_ids.shape[1]<=128000]
+    data_all = dataset.filter(lambda x: (x['length'] != 'long') and (tokenzier(x["context"],return_tensors='pt').input_ids.shape[1]<=128000))
+
+    # data_all = [k for k in data_all if tokenzier(k["context"],return_tensors='pt').input_ids.shape[1]<=128000]
 
 
     test_datasets = ['Code Repository Understanding', 
