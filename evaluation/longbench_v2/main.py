@@ -79,9 +79,10 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
             pred = extract_answer(pred_str)
             pred_res.append({"dataset_name": dataset_name, 
                              "pred": pred, 
+                             "output":pred_str,
                              "answers": answers, 
                              "judge": (pred == answers),
-                             "context": context[:1000],
+                            #  "context": context[:1000],
                              "length":sample["length"],
                              "difficulty":sample["difficulty"]}) 
             pbar.update(1)
