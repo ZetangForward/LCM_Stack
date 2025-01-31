@@ -47,7 +47,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
     logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    logger.info(f"rank {rank} 开始加载模型 ...")
+    logger.info(f"rank {rank} begin to load model ...")
     test_model = AutoModelForCausalLM.from_pretrained(model_path, use_flash_attention_2="flash_attention_2", device_map="auto").half().eval()
     if adapter_path:
         test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
@@ -128,11 +128,11 @@ if __name__ == "__main__":
             suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-1]}"
             pred_dir = os.path.join(args.save_path, suffix_tag)
         else:
-            pred_dir = os.path.join(args.save_path, "vanilla")
+            suffix_tag = f"{args.model_path.split('/')[-2]}-{args.model_path.split('/')[-1]}"
+            pred_dir = os.path.join(args.save_path, suffix_tag)
 
     seed_everything(args.seed)
     os.makedirs(args.save_path, exist_ok=True)
-    print(args)
     
     if args.rag > 0:
         prompts_type = "rag"

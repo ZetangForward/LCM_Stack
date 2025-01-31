@@ -6,7 +6,3 @@ python main.py \
     --chat_template="User: {}\nAssistant: " \
     --model_max_length_setting="normal_setting" \
     --save_path="./results/Llama3.1-8B";
-
-# echo "generate finish ..., begin to evaluate ..."
-
-# python eval_longbench.py --pred_path=${SAVE_PATH}/${MODEL_NAME}

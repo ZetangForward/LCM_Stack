@@ -132,10 +132,14 @@ if __name__ == "__main__":
         pred_dir = os.path.join(args.save_path, args.tag)
     else:
         if args.adapter_path:
-            suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-1]}"
+            suffix_tag = f"{args.adapter_path.split('/')[-2]}/{args.adapter_path.split('/')[-1]}"
             pred_dir = os.path.join(args.save_path, suffix_tag)
         else:
-            pred_dir = os.path.join(args.save_path, "vanilla")
+            suffix_tag = f"{args.model_path.split('/')[-2]}/{args.model_path.split('/')[-1]}"
+            pred_dir = os.path.join(args.save_path, suffix_tag)
+
+    seed_everything(args.seed)
+    os.makedirs(args.save_path, exist_ok=True)
     
     if os.path.exists(pred_dir):
         already_finish_files = auto_read_dir(pred_dir, file_suffix=".jsonl")
