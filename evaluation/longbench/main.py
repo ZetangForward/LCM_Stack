@@ -20,13 +20,17 @@ def seed_everything(seed):
     torch.backends.cudnn.deterministic = True
 
 
-def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, max_context_length=None, chat_template=None, return_list=None):
+def get_pred(
+        rank=None, model_path=None, adapter_path=None, datasets=None, 
+        dataset_name=None, max_context_length=None, chat_template=None, 
+        model_config=None, return_list=None
+    ):
     os.environ["CUDA_VISIBLE_DEVICES"] = rank
     logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    logger.info(f"rank {rank} 开始加载模型 ...")
-    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
+    logger.info(f"rank {rank} begin to load model ...")
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=model_config if (model_config is not None and len(model_config)>0) else None )
     if adapter_path:
         test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
 
@@ -69,12 +73,6 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                 prompt = tokenizer.decode(textual_input[:half], skip_special_tokens=True) + tokenizer.decode(textual_input[-half:], skip_special_tokens=True)
 
             input_ids = tokenizer(prompt, return_tensors="pt").to(test_model.device).input_ids
-            if input_ids.size(-1) == 0:
-                print("=============")
-                print(f"textual_input.shape {textual_input.shape}")
-                print(f"max_context_length {max_context_length}")
-                print("=============")
-            print(f"context length: {input_ids.shape}")
 
             if dataset_name in ["2wikimqa_e", "hotpotqa_e", "musique_e", "multifieldqa_en_e", "qasper_e", "narrativeqa_e", "samsum_e"]:
                 outputs = test_model.generate(
@@ -115,20 +113,25 @@ if __name__ == "__main__":
     parser.add_argument('--chat_template', type=str, default=None, help='chat template')
     parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
+    parser.add_argument('--model_config', type=str, default=None, help='model config')
 
     args = parser.parse_args()
     
     mp.set_start_method('spawn', force=True)
 
-    all_gpu_list = args.gpu_lst.split(',')
-    logger.info(f'begin to eval on {len(all_gpu_list)} gpus | tensor parallel size is {args.tp_size}...')
+    # all_gpu_list = args.gpu_lst.split(',')
+    all_gpu_list = os.environ.get("SLURM_JOB_GPUS", "").split(',')
+    if not all_gpu_list[0]:
+        all_gpu_list = os.environ.get("SLURM_STEP_GPUS", "").split(',')
+
+    logger.info(f'begin to eval on {all_gpu_list} gpus | tensor parallel size is {args.tp_size}...')
     split_gpu_list = []
     for i in range(0, len(all_gpu_list), args.tp_size):
         split_gpu_list.append(",".join(all_gpu_list[i:i+args.tp_size]))
 
     world_size = len(split_gpu_list)
 
-    if args.tag:
+    if args.tag and len(args.tag) > 0:
         pred_dir = os.path.join(args.save_path, args.tag)
     else:
         if args.adapter_path:
@@ -178,7 +181,7 @@ if __name__ == "__main__":
             return_list = manager.list()
              
             for rank in range(0, world_size):
-                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, args.chat_template, return_list))
+                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, args.chat_template, args.model_config, return_list))
                 p.start()
                 processes.append(p)
                 time.sleep(5)

@@ -1,0 +1,925 @@
+2025-02-02 16:53:44.549 | INFO     | __main__:<module>:127 - begin to eval on ['3', '4', '6', '7'] gpus | tensor parallel size is 1...
+2025-02-02 16:53:44.562 | INFO     | modelzipper.tutils:auto_read_dir:371 - number of files with prefix '' and suffix '.jsonl': 14
+2025-02-02 16:54:12.234 | INFO     | __main__:<module>:163 - evaluating on datasets: ['musique', 'multi_news_e', 'passage_retrieval_en_e', 'triviaqa_e', 'qasper_e', 'gov_report_e', '2wikimqa_e', 'trec_e', 'multifieldqa_en_e', 'lcc_e']
+2025-02-02 16:54:12.235 | INFO     | __main__:<module>:165 - max_context_length are set as 32000
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:54:43.733 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing musique length 50 ...
+2025-02-02 16:54:44.595 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 16:54:49.036 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing musique length 50 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:54:49.958 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 16:54:53.450 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing musique length 50 ...
+2025-02-02 16:54:54.326 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:07<00:22,  7.41s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.04s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.59s/it]2025-02-02 16:55:01.993 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing musique length 50 ...
+2025-02-02 16:55:02.842 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  50%|█████     | 2/4 [00:16<00:17,  8.58s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:07,  3.61s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:12<00:13,  6.91s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.65s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.72s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:03,  3.24s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:28<00:09, 10.00s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:18<00:07,  7.18s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:24<00:08,  8.95s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  3.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.81s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:26<00:00,  6.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:26<00:00,  6.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.07s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.77s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.36s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.15s/it]
+Process Process-5:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Process Process-2:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Process Process-3:
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Process Process-4:
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+
+During handling of the above exception, another exception occurred:
+
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+ 25%|██▌       | 1/4 [01:09<03:27, 69.28s/it]100%|██████████| 4/4 [01:09<00:00, 17.32s/it]
+2025-02-02 16:55:22.948 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 16:55:22.949 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/musique.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:55:54.881 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing multi_news_e length 74 ...
+2025-02-02 16:55:56.215 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 16:56:00.005 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing multi_news_e length 74 ...
+2025-02-02 16:56:00.916 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.17s/it]2025-02-02 16:56:04.623 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing multi_news_e length 73 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:56:05.663 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.11s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.64s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.50s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.73s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.66s/it]Process Process-7:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+2025-02-02 16:56:09.450 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing multi_news_e length 73 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]2025-02-02 16:56:10.416 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+ 25%|██▌       | 1/4 [00:45<02:16, 45.36s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.19s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+Process Process-8:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.73s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 50%|█████     | 2/4 [00:47<00:39, 19.72s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.78s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.70s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.21s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.40s/it]
+Process Process-9:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.71s/it] 75%|███████▌  | 3/4 [00:51<00:12, 12.88s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.79s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.74s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.44s/it]
+Process Process-10:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:57<00:00, 10.00s/it]100%|██████████| 4/4 [00:57<00:00, 14.37s/it]
+2025-02-02 16:56:22.666 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 16:56:22.667 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/multi_news_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:56:55.752 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing passage_retrieval_en_e length 75 ...
+2025-02-02 16:56:56.539 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 16:57:01.057 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing passage_retrieval_en_e length 75 ...
+2025-02-02 16:57:01.809 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.69s/it]2025-02-02 16:57:04.764 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing passage_retrieval_en_e length 75 ...
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.70s/it]2025-02-02 16:57:05.706 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.65s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.19s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.37s/it]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.66s/it]Process Process-12:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+ 25%|██▌       | 1/4 [00:44<02:13, 44.54s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.68s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:57:10.010 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing passage_retrieval_en_e length 75 ...
+2025-02-02 16:57:10.819 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.16s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.34s/it]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.65s/it]Process Process-13:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 50%|█████     | 2/4 [00:48<00:41, 20.52s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.74s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.67s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.19s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.38s/it]
+Process Process-14:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.69s/it] 75%|███████▌  | 3/4 [00:52<00:13, 13.03s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.75s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.72s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.24s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.42s/it]
+Process Process-15:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:57<00:00, 10.00s/it]100%|██████████| 4/4 [00:57<00:00, 14.43s/it]
+2025-02-02 16:57:22.327 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 16:57:22.328 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/passage_retrieval_en_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:57:53.649 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing triviaqa_e length 75 ...
+2025-02-02 16:57:54.390 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:57:59.461 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing triviaqa_e length 75 ...
+2025-02-02 16:58:00.214 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.61s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.68s/it]2025-02-02 16:58:03.159 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing triviaqa_e length 75 ...
+2025-02-02 16:58:03.944 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.35s/it]
+Process Process-17:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 25%|██▌       | 1/4 [00:41<02:05, 41.84s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.15s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.11s/it]2025-02-02 16:58:09.093 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing triviaqa_e length 75 ...
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.61s/it]2025-02-02 16:58:09.876 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.08s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.50s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.72s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.66s/it]Process Process-18:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+ 50%|█████     | 2/4 [00:48<00:42, 21.26s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.66s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.37s/it]
+Process Process-19:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:50<00:12, 12.49s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.12s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.11s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.50s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.72s/it]
+Process Process-20:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:58<00:00, 10.56s/it]100%|██████████| 4/4 [00:58<00:00, 14.59s/it]
+2025-02-02 16:58:22.598 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 16:58:22.599 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/triviaqa_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:58:55.094 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing qasper_e length 56 ...
+2025-02-02 16:58:55.860 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 16:58:59.999 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing qasper_e length 56 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:59:00.774 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.67s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.68s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:59:05.686 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing qasper_e length 56 ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.35s/it]
+Process Process-22:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.68s/it]2025-02-02 16:59:06.534 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+ 25%|██▌       | 1/4 [00:43<02:09, 43.17s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.75s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.72s/it]2025-02-02 16:59:10.191 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing qasper_e length 56 ...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.24s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.41s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Process Process-23:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+2025-02-02 16:59:10.959 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+ 50%|█████     | 2/4 [00:47<00:40, 20.26s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.16s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.15s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.61s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.50s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.72s/it]
+Process Process-24:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.30s/it] 75%|███████▌  | 3/4 [00:54<00:14, 14.48s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.65s/it]
+Process Process-25:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:58<00:00, 10.16s/it]100%|██████████| 4/4 [00:58<00:00, 14.64s/it]
+2025-02-02 16:59:23.112 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 16:59:23.114 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/qasper_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 16:59:54.747 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing gov_report_e length 75 ...
+2025-02-02 16:59:55.506 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 17:00:00.675 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing gov_report_e length 75 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:00:01.566 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:07,  2.47s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 17:00:04.243 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing gov_report_e length 75 ...
+2025-02-02 17:00:05.292 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.26s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.24s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.87s/it]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.07s/it]Process Process-27:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+2025-02-02 17:00:09.092 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing gov_report_e length 75 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:00:09.970 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.07s/it] 25%|██▌       | 1/4 [00:45<02:17, 45.89s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.58s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.63s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.47s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.69s/it]
+Process Process-28:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.61s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.33s/it]
+ 50%|█████     | 2/4 [00:50<00:42, 21.33s/it]Process Process-29:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.76s/it] 75%|███████▌  | 3/4 [00:51<00:12, 12.15s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.78s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.70s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.41s/it]
+Process Process-30:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:56<00:00,  9.35s/it]100%|██████████| 4/4 [00:56<00:00, 14.08s/it]
+2025-02-02 17:00:21.357 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 17:00:21.359 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/gov_report_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:00:53.187 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing 2wikimqa_e length 75 ...
+2025-02-02 17:00:53.947 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 17:00:58.287 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing 2wikimqa_e length 75 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:00:59.035 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.65s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.70s/it]2025-02-02 17:01:02.766 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing 2wikimqa_e length 75 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:01:03.666 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+Process Process-32:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.61s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 25%|██▌       | 1/4 [00:42<02:07, 42.65s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.69s/it]2025-02-02 17:01:07.672 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing 2wikimqa_e length 75 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]2025-02-02 17:01:08.465 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+Process Process-33:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.64s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 50%|█████     | 2/4 [00:46<00:40, 20.02s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.73s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.67s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.21s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.38s/it]
+Process Process-34:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.70s/it] 75%|███████▌  | 3/4 [00:51<00:13, 13.17s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.73s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.67s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.19s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.38s/it]
+Process Process-35:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:56<00:00,  9.72s/it]100%|██████████| 4/4 [00:56<00:00, 14.07s/it]
+2025-02-02 17:01:19.548 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 17:01:19.549 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/2wikimqa_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:01:51.510 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing trec_e length 75 ...
+2025-02-02 17:01:52.342 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+2025-02-02 17:01:56.418 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing trec_e length 75 ...
+2025-02-02 17:01:57.268 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.67s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.66s/it]2025-02-02 17:02:01.373 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing trec_e length 75 ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:02:02.143 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.61s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.33s/it]
+Process Process-37:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.74s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 25%|██▌       | 1/4 [00:42<02:07, 42.61s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.79s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 17:02:06.365 | INFO     | __mp_main__:get_pred:29 - gpu id 7 is processing trec_e length 75 ...
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.72s/it]2025-02-02 17:02:07.158 | INFO     | __mp_main__:get_pred:32 - rank 7 begin to load model ...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.23s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.42s/it]
+Process Process-38:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.70s/it]The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+ 50%|█████     | 2/4 [00:47<00:40, 20.16s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.72s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+Process Process-39:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+ 75%|███████▌  | 3/4 [00:51<00:12, 12.96s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.60s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.69s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.35s/it]
+Process Process-40:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 257, in _get_peft_type
+    config_file = hf_hub_download(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 35, in get_pred
+    test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/peft_model.py", line 479, in from_pretrained
+    PeftConfig._get_peft_type(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/peft/config.py", line 263, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at '/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100'
+100%|██████████| 4/4 [00:56<00:00, 10.00s/it]100%|██████████| 4/4 [00:56<00:00, 14.23s/it]
+2025-02-02 17:02:18.678 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 17:02:18.680 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-lora/global_step100/trec_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]

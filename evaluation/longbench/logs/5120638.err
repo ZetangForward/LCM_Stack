@@ -1,0 +1,97 @@
+2025-02-02 12:44:13.006 | INFO     | __main__:<module>:119 - begin to eval on 1 gpus | tensor parallel size is 1...
+2025-02-02 12:44:13.020 | INFO     | modelzipper.tutils:auto_read_dir:371 - number of files with prefix '' and suffix '.jsonl': 0
+2025-02-02 12:44:13.021 | INFO     | __main__:<module>:155 - evaluating on datasets: ['multi_news_e', 'hotpotqa_e', 'gov_report_e', 'trec_e', 'passage_retrieval_en_e', 'passage_count_e', 'musique', 'samsum_e', 'repobench-p_e', 'lcc_e', 'qasper_e', 'multifieldqa_en_e', 'triviaqa_e', '2wikimqa_e']
+2025-02-02 12:44:13.022 | INFO     | __main__:<module>:157 - max_context_length are set as 32000
+  0%|          | 0/1 [00:00<?, ?it/s]2025-02-02 12:44:45.616 | INFO     | __mp_main__:get_pred:25 - gpu id  is processing multi_news_e length 294 ...
+2025-02-02 12:44:49.259 | INFO     | __mp_main__:get_pred:28 - rank  开始加载模型 ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-2:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 29, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4091, in from_pretrained
+    config = cls._autoset_attn_implementation(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1617, in _autoset_attn_implementation
+    cls._check_and_enable_flash_attn_2(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1756, in _check_and_enable_flash_attn_2
+    raise ValueError(
+ValueError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: Flash Attention 2 is not available on CPU. Please make sure torch can access a CUDA device.
+100%|██████████| 1/1 [00:35<00:00, 35.38s/it]100%|██████████| 1/1 [00:35<00:00, 35.38s/it]
+2025-02-02 12:44:51.622 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 12:44:51.623 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-full/global_step100/multi_news_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/1 [00:00<?, ?it/s]2025-02-02 12:45:24.122 | INFO     | __mp_main__:get_pred:25 - gpu id  is processing hotpotqa_e length 300 ...
+2025-02-02 12:45:29.243 | INFO     | __mp_main__:get_pred:28 - rank  开始加载模型 ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-4:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 29, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4091, in from_pretrained
+    config = cls._autoset_attn_implementation(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1617, in _autoset_attn_implementation
+    cls._check_and_enable_flash_attn_2(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1756, in _check_and_enable_flash_attn_2
+    raise ValueError(
+ValueError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: Flash Attention 2 is not available on CPU. Please make sure torch can access a CUDA device.
+100%|██████████| 1/1 [00:36<00:00, 36.97s/it]100%|██████████| 1/1 [00:36<00:00, 36.97s/it]
+2025-02-02 12:45:31.384 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 12:45:31.385 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-full/global_step100/hotpotqa_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/1 [00:00<?, ?it/s]2025-02-02 12:46:02.631 | INFO     | __mp_main__:get_pred:25 - gpu id  is processing gov_report_e length 300 ...
+2025-02-02 12:46:06.736 | INFO     | __mp_main__:get_pred:28 - rank  开始加载模型 ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-6:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 29, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4091, in from_pretrained
+    config = cls._autoset_attn_implementation(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1617, in _autoset_attn_implementation
+    cls._check_and_enable_flash_attn_2(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1756, in _check_and_enable_flash_attn_2
+    raise ValueError(
+ValueError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: Flash Attention 2 is not available on CPU. Please make sure torch can access a CUDA device.
+100%|██████████| 1/1 [00:34<00:00, 34.92s/it]100%|██████████| 1/1 [00:34<00:00, 34.92s/it]
+2025-02-02 12:46:08.820 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 12:46:08.822 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-full/global_step100/gov_report_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/1 [00:00<?, ?it/s]2025-02-02 12:46:39.031 | INFO     | __mp_main__:get_pred:25 - gpu id  is processing trec_e length 300 ...
+2025-02-02 12:46:42.080 | INFO     | __mp_main__:get_pred:28 - rank  开始加载模型 ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-8:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 29, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4091, in from_pretrained
+    config = cls._autoset_attn_implementation(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1617, in _autoset_attn_implementation
+    cls._check_and_enable_flash_attn_2(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1756, in _check_and_enable_flash_attn_2
+    raise ValueError(
+ValueError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: Flash Attention 2 is not available on CPU. Please make sure torch can access a CUDA device.
+100%|██████████| 1/1 [00:33<00:00, 33.47s/it]100%|██████████| 1/1 [00:33<00:00, 33.47s/it]
+2025-02-02 12:46:44.472 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 12:46:44.474 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/long-context-training-V1-full/global_step100/trec_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/1 [00:00<?, ?it/s]slurmstepd: error: *** JOB 5120638 ON SH-IDC1-10-140-24-101 CANCELLED AT 2025-02-02T12:46:48 ***

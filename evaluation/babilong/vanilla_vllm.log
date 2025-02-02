@@ -1,0 +1,333 @@
+INTO-FILE
+Consumer: 67774:   0%|          | 0/300 [00:00<?, ?it/s]Consumer: 67779:   0%|          | 0/300 [00:00<?, ?it/s]Consumer: 67783:   0%|          | 0/300 [00:00<?, ?it/s]Producer: 67787:   0%|          | 0/9 [00:00<?, ?it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:   1%|          | 1/100 [00:00<00:37,  2.67it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 251.35it/s]
+Producer: 67787:  11%|█         | 1/9 [00:00<00:03,  2.51it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:  19%|█▉        | 19/100 [00:00<00:00, 189.75it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 856.53it/s]
+Producer: 67787:  22%|██▏       | 2/9 [00:00<00:01,  4.29it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:  32%|███▏      | 32/100 [00:00<00:00, 319.52it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 904.31it/s]
+Producer: 67787:  33%|███▎      | 3/9 [00:00<00:01,  5.64it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:   1%|          | 1/100 [00:00<00:10,  9.34it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 741.47it/s]
+Producer: 67787:  44%|████▍     | 4/9 [00:00<00:00,  6.22it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:   1%|          | 1/100 [00:00<00:13,  7.51it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 684.37it/s]
+Producer: 67787:  56%|█████▌    | 5/9 [00:00<00:00,  6.42it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 1094.92it/s]
+
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:  51%|█████     | 51/100 [00:00<00:00, 509.65it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 938.15it/s]
+Producer: 67787:  78%|███████▊  | 7/9 [00:01<00:00,  7.87it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:  61%|██████    | 61/100 [00:00<00:00, 609.58it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 932.06it/s]
+Producer: 67787:  89%|████████▉ | 8/9 [00:01<00:00,  8.20it/s]
+P single: 67787:   0%|          | 0/100 [00:00<?, ?it/s][A
+P single: 67787:  25%|██▌       | 25/100 [00:00<00:00, 249.61it/s][AP single: 67787: 100%|██████████| 100/100 [00:00<00:00, 822.20it/s]
+Producer: 67787: 100%|██████████| 9/9 [00:01<00:00,  8.20it/s]Producer: 67787: 100%|██████████| 9/9 [00:01<00:00,  6.73it/s]
+WARNING 12-25 16:53:40 arg_utils.py:957] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 12-25 16:53:40 config.py:1021] Chunked prefill is enabled with max_num_batched_tokens=512.
+INFO 12-25 16:53:40 llm_engine.py:237] Initializing an LLM engine (v0.6.3.post1) with config: model='/data/hf_models/Meta-Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='/data/hf_models/Meta-Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=64000, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=/data/hf_models/Meta-Llama-3.1-8B-Instruct, num_scheduler_steps=1, chunked_prefill_enabled=True multi_step_stream_outputs=True, enable_prefix_caching=False, use_async_output_proc=True, use_cached_outputs=False, mm_processor_kwargs=None)
+WARNING 12-25 16:53:40 arg_utils.py:957] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+WARNING 12-25 16:53:40 arg_utils.py:957] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 12-25 16:53:40 config.py:1021] Chunked prefill is enabled with max_num_batched_tokens=512.
+INFO 12-25 16:53:40 config.py:1021] Chunked prefill is enabled with max_num_batched_tokens=512.
+INFO 12-25 16:53:40 llm_engine.py:237] Initializing an LLM engine (v0.6.3.post1) with config: model='/data/hf_models/Meta-Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='/data/hf_models/Meta-Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=64000, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=/data/hf_models/Meta-Llama-3.1-8B-Instruct, num_scheduler_steps=1, chunked_prefill_enabled=True multi_step_stream_outputs=True, enable_prefix_caching=False, use_async_output_proc=True, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 12-25 16:53:40 llm_engine.py:237] Initializing an LLM engine (v0.6.3.post1) with config: model='/data/hf_models/Meta-Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='/data/hf_models/Meta-Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=64000, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=/data/hf_models/Meta-Llama-3.1-8B-Instruct, num_scheduler_steps=1, chunked_prefill_enabled=True multi_step_stream_outputs=True, enable_prefix_caching=False, use_async_output_proc=True, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 12-25 16:53:46 model_runner.py:1056] Starting to load model /data/hf_models/Meta-Llama-3.1-8B-Instruct...
+
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+[AINFO 12-25 16:53:46 model_runner.py:1056] Starting to load model /data/hf_models/Meta-Llama-3.1-8B-Instruct...
+INFO 12-25 16:53:47 model_runner.py:1056] Starting to load model /data/hf_models/Meta-Llama-3.1-8B-Instruct...
+
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+[A
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+[A
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:02<00:06,  2.12s/it]
+[A
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.99s/it]
+[A
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.99s/it]
+[A
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:04<00:04,  2.21s/it]
+[A
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:04<00:04,  2.20s/it]
+[A
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:04<00:04,  2.13s/it]
+[A
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.26s/it]
+[A
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.24s/it]
+[A
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.17s/it]
+[A
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.59s/it]
+[ALoading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.82s/it]
+
+INFO 12-25 16:53:54 model_runner.py:1067] Loading model weights took 14.9888 GB
+
+
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.57s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.61s/it]
+[A[ALoading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.77s/it]
+
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.82s/it]
+
+INFO 12-25 16:53:54 gpu_executor.py:122] # GPU blocks: 39273, # CPU blocks: 6144
+INFO 12-25 16:53:54 gpu_executor.py:126] Maximum concurrency for 64000 tokens per request: 9.82x
+INFO 12-25 16:53:54 model_runner.py:1067] Loading model weights took 14.9888 GB
+INFO 12-25 16:53:54 model_runner.py:1067] Loading model weights took 14.9888 GB
+INFO 12-25 16:53:55 gpu_executor.py:122] # GPU blocks: 39273, # CPU blocks: 6144
+INFO 12-25 16:53:55 gpu_executor.py:126] Maximum concurrency for 64000 tokens per request: 9.82x
+INFO 12-25 16:53:55 gpu_executor.py:122] # GPU blocks: 39273, # CPU blocks: 6144
+INFO 12-25 16:53:55 gpu_executor.py:126] Maximum concurrency for 64000 tokens per request: 9.82x
+INFO 12-25 16:54:00 model_runner.py:1395] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 12-25 16:54:00 model_runner.py:1399] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 12-25 16:54:01 model_runner.py:1395] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 12-25 16:54:01 model_runner.py:1399] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 12-25 16:54:01 model_runner.py:1395] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 12-25 16:54:01 model_runner.py:1399] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 12-25 16:54:09 model_runner.py:1523] Graph capturing finished in 9 secs.
+INFO 12-25 16:54:10 model_runner.py:1523] Graph capturing finished in 9 secs.
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.28s/it, est. speed input: 697.09 toks/s, output: 78.06 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.28s/it, est. speed input: 697.09 toks/s, output: 78.06 toks/s]
+Consumer: 67774:   0%|          | 1/300 [00:35<2:58:54, 35.90s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 693.95 toks/s, output: 79.76 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 693.95 toks/s, output: 79.76 toks/s]
+Consumer: 67783:   0%|          | 1/300 [00:35<2:59:05, 35.94s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.79it/s, est. speed input: 3406.62 toks/s, output: 45.47 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.79it/s, est. speed input: 3406.62 toks/s, output: 45.47 toks/s]
+Consumer: 67774:   1%|          | 2/300 [00:36<1:14:12, 14.94s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.94it/s, est. speed input: 3506.20 toks/s, output: 47.32 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.94it/s, est. speed input: 3506.20 toks/s, output: 47.32 toks/s]
+Consumer: 67783:   1%|          | 2/300 [00:36<1:14:14, 14.95s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it, est. speed input: 446.82 toks/s, output: 82.74 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it, est. speed input: 446.82 toks/s, output: 82.74 toks/s]
+Consumer: 67783:   1%|          | 3/300 [00:37<42:56,  8.68s/it]  
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 715.35 toks/s, output: 79.13 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 715.35 toks/s, output: 79.13 toks/s]
+Consumer: 67774:   1%|          | 3/300 [00:37<43:02,  8.70s/it]  
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][AINFO 12-25 16:54:13 model_runner.py:1523] Graph capturing finished in 12 secs.
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 715.61 toks/s, output: 80.40 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 715.61 toks/s, output: 80.40 toks/s]
+Consumer: 67783:   1%|▏         | 4/300 [00:38<28:20,  5.74s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 714.63 toks/s, output: 79.93 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 714.63 toks/s, output: 79.93 toks/s]
+Consumer: 67774:   1%|▏         | 4/300 [00:38<28:24,  5.76s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 578.68 toks/s, output: 80.59 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 578.68 toks/s, output: 80.59 toks/s]
+Consumer: 67779:   0%|          | 1/300 [00:39<3:15:42, 39.27s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.93it/s, est. speed input: 3308.61 toks/s, output: 47.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.93it/s, est. speed input: 3308.61 toks/s, output: 47.15 toks/s]
+Consumer: 67779:   1%|          | 2/300 [00:39<1:21:04, 16.32s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.76it/s, est. speed input: 3379.10 toks/s, output: 45.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.76it/s, est. speed input: 3379.10 toks/s, output: 45.15 toks/s]
+Consumer: 67779:   1%|          | 3/300 [00:39<44:30,  8.99s/it]  
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 685.51 toks/s, output: 80.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 685.51 toks/s, output: 80.55 toks/s]
+Consumer: 67783:   2%|▏         | 5/300 [00:39<20:15,  4.12s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 677.43 toks/s, output: 79.88 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 677.43 toks/s, output: 79.88 toks/s]
+Consumer: 67774:   2%|▏         | 5/300 [00:39<20:19,  4.14s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 714.71 toks/s, output: 79.41 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 714.71 toks/s, output: 79.41 toks/s]
+Consumer: 67779:   1%|▏         | 4/300 [00:41<29:18,  5.94s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 718.90 toks/s, output: 80.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it, est. speed input: 718.90 toks/s, output: 80.50 toks/s]
+Consumer: 67783:   2%|▏         | 6/300 [00:41<15:24,  3.14s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 713.01 toks/s, output: 79.93 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 713.01 toks/s, output: 79.93 toks/s]
+Consumer: 67774:   2%|▏         | 6/300 [00:41<15:27,  3.16s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.96it/s, est. speed input: 3532.97 toks/s, output: 47.47 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.95it/s, est. speed input: 3532.97 toks/s, output: 47.47 toks/s]
+Consumer: 67783:   2%|▏         | 7/300 [00:41<10:44,  2.20s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 715.24 toks/s, output: 80.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 715.24 toks/s, output: 80.00 toks/s]
+Consumer: 67779:   2%|▏         | 5/300 [00:42<20:53,  4.25s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 707.88 toks/s, output: 79.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 707.88 toks/s, output: 79.89 toks/s]
+Consumer: 67774:   2%|▏         | 7/300 [00:42<12:22,  2.53s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 715.97 toks/s, output: 80.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 715.97 toks/s, output: 80.09 toks/s]
+Consumer: 67783:   3%|▎         | 8/300 [00:42<09:14,  1.90s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 694.64 toks/s, output: 80.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it, est. speed input: 694.64 toks/s, output: 80.12 toks/s]
+Consumer: 67779:   2%|▏         | 6/300 [00:43<15:49,  3.23s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 714.59 toks/s, output: 79.40 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 714.59 toks/s, output: 79.40 toks/s]
+Consumer: 67774:   3%|▎         | 8/300 [00:43<10:21,  2.13s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 716.96 toks/s, output: 79.48 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it, est. speed input: 716.96 toks/s, output: 79.48 toks/s]
+Consumer: 67783:   3%|▎         | 9/300 [00:43<08:14,  1.70s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.95it/s, est. speed input: 3524.51 toks/s, output: 47.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.94it/s, est. speed input: 3524.51 toks/s, output: 47.36 toks/s]
+Consumer: 67774:   3%|▎         | 9/300 [00:43<07:29,  1.54s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][ATraceback (most recent call last):
+  File "/data/zecheng/acl2025/MyRLHF/inference/inference_vanilla_vllm.py", line 241, in <module>
+    with BabilongManager(
+  File "/data/zecheng/acl2025/MyRLHF/inference/multiprocessingtools/pattern/producerconsumer.py", line 180, in __enter__
+    process.join()        
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/popen_fork.py", line 43, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt
+Process Process-4:
+Process Process-3:
+Process Process-2:
+Traceback (most recent call last):
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/data/zecheng/acl2025/MyRLHF/inference/multiprocessingtools/pattern/producerconsumer.py", line 262, in _consumer
+    for task_result in consume(task_sample, consume_config, global_variables):
+  File "/data/zecheng/acl2025/MyRLHF/inference/inference_vanilla_vllm.py", line 128, in process
+    outputs = model.generate(chunk_message, sampling_params = sampling_params)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/utils.py", line 1063, in inner
+    return fn(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 353, in generate
+    outputs = self._run_engine(use_tqdm=use_tqdm)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 879, in _run_engine
+    step_outputs = self.llm_engine.step()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 1389, in step
+    outputs = self.model_executor.execute_model(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/executor/gpu_executor.py", line 134, in execute_model
+    output = self.driver_worker.execute_model(execute_model_req)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/worker_base.py", line 327, in execute_model
+    output = self.model_runner.execute_model(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/model_runner_base.py", line 116, in _wrapper
+    return func(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/model_runner.py", line 1701, in execute_model
+    output: SamplerOutput = self.model.sample(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/models/llama.py", line 573, in sample
+    next_tokens = self.sampler(logits, sampling_metadata)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 277, in forward
+    maybe_deferred_sample_results, maybe_sampled_tokens_tensor = _sample(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 881, in _sample
+    return _sample_with_torch(
+Traceback (most recent call last):
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 850, in _sample_with_torch
+    return get_pythonized_sample_results(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 714, in get_pythonized_sample_results
+    sample_results = _greedy_sample(seq_groups, greedy_samples)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 479, in _greedy_sample
+    samples_lst = samples.tolist()
+KeyboardInterrupt
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/data/zecheng/acl2025/MyRLHF/inference/multiprocessingtools/pattern/producerconsumer.py", line 262, in _consumer
+    for task_result in consume(task_sample, consume_config, global_variables):
+  File "/data/zecheng/acl2025/MyRLHF/inference/inference_vanilla_vllm.py", line 128, in process
+    outputs = model.generate(chunk_message, sampling_params = sampling_params)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/utils.py", line 1063, in inner
+    return fn(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 353, in generate
+    outputs = self._run_engine(use_tqdm=use_tqdm)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 879, in _run_engine
+    step_outputs = self.llm_engine.step()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 1389, in step
+    outputs = self.model_executor.execute_model(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/executor/gpu_executor.py", line 134, in execute_model
+    output = self.driver_worker.execute_model(execute_model_req)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/worker_base.py", line 327, in execute_model
+    output = self.model_runner.execute_model(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/model_runner_base.py", line 116, in _wrapper
+    return func(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/model_runner.py", line 1701, in execute_model
+    output: SamplerOutput = self.model.sample(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/models/llama.py", line 573, in sample
+    next_tokens = self.sampler(logits, sampling_metadata)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 277, in forward
+    maybe_deferred_sample_results, maybe_sampled_tokens_tensor = _sample(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 881, in _sample
+    return _sample_with_torch(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 850, in _sample_with_torch
+    return get_pythonized_sample_results(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 714, in get_pythonized_sample_results
+    sample_results = _greedy_sample(seq_groups, greedy_samples)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 479, in _greedy_sample
+    samples_lst = samples.tolist()
+KeyboardInterrupt
+Traceback (most recent call last):
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/data/zecheng/acl2025/MyRLHF/inference/multiprocessingtools/pattern/producerconsumer.py", line 262, in _consumer
+    for task_result in consume(task_sample, consume_config, global_variables):
+  File "/data/zecheng/acl2025/MyRLHF/inference/inference_vanilla_vllm.py", line 128, in process
+    outputs = model.generate(chunk_message, sampling_params = sampling_params)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/utils.py", line 1063, in inner
+    return fn(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 353, in generate
+    outputs = self._run_engine(use_tqdm=use_tqdm)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 879, in _run_engine
+    step_outputs = self.llm_engine.step()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 1389, in step
+    outputs = self.model_executor.execute_model(
+Consumer: 67783:   3%|▎         | 9/300 [00:44<23:57,  4.94s/it]  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/executor/gpu_executor.py", line 134, in execute_model
+    output = self.driver_worker.execute_model(execute_model_req)
+
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/worker_base.py", line 327, in execute_model
+    output = self.model_runner.execute_model(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/model_runner_base.py", line 116, in _wrapper
+    return func(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/worker/model_runner.py", line 1701, in execute_model
+    output: SamplerOutput = self.model.sample(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/models/llama.py", line 573, in sample
+    next_tokens = self.sampler(logits, sampling_metadata)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 277, in forward
+    maybe_deferred_sample_results, maybe_sampled_tokens_tensor = _sample(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 881, in _sample
+    return _sample_with_torch(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 850, in _sample_with_torch
+    return get_pythonized_sample_results(
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 714, in get_pythonized_sample_results
+    sample_results = _greedy_sample(seq_groups, greedy_samples)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/site-packages/vllm/model_executor/layers/sampler.py", line 479, in _greedy_sample
+    samples_lst = samples.tolist()
+KeyboardInterrupt
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]
+Consumer: 67779:   2%|▏         | 6/300 [00:44<36:19,  7.41s/it]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]
+Consumer: 67774:   3%|▎         | 9/300 [00:44<23:58,  4.94s/it]
+Exception ignored in atexit callback: <function _exit_function at 0x7feee8a3ac20>
+Traceback (most recent call last):
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/popen_fork.py", line 43, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/data/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt: 

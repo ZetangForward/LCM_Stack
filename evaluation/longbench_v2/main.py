@@ -43,7 +43,7 @@ def extract_answer(response):
             return None
         
 def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, return_list=None, prompts_type = None):
-    os.environ["CUDA_VISIBLE_DEVICES"] = rank
+    # os.environ["CUDA_VISIBLE_DEVICES"] = rank
     logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
@@ -72,7 +72,9 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
             outputs = test_model.generate(
                 textual_input, 
                 max_new_tokens=128, 
-                temperature=0.1,
+                temperature=0.9,
+                do_sample = True,
+                top_p = 0.95,
             )[0]
 
             pred_str = tokenizer.decode(outputs[textual_input.shape[-1]:], skip_special_tokens=True)
@@ -99,7 +101,7 @@ if __name__ == "__main__":
     parser.add_argument('--adapter_path', type=str, default=None, help='Path to the PEFT model')
     parser.add_argument('--save_path', type=str, default=None, help='Path to save the output')
     parser.add_argument('--gpu_lst', type=str, default="0,1,2,3,4,5,6,7", help='All available gpus')
-    parser.add_argument('--tp_size', type=int, default=1, help='model parallel size')
+    parser.add_argument('--tp_size', type=int, default=2, help='model parallel size')
     parser.add_argument('--tag', type=str, default=None, help='output_dir tag')
     parser.add_argument('--chat_template', type=str, default=None, help='chat template')
     parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
@@ -107,10 +109,10 @@ if __name__ == "__main__":
     parser.add_argument("--cot", "-cot", action='store_true') # set to True if using COT
     parser.add_argument("--no_context", "-nc", action='store_true') # set to True if using no context (directly measuring memorization)
     parser.add_argument("--rag", "-rag", type=int, default=0) # set to 0 if RAG is not used, otherwise set to N when using top-N retrieved context
-
-    args = parser.parse_args()
-    args = parser.parse_args()
     
+    args = parser.parse_args()
+    args = parser.parse_args()
+    print("Pid:", os.getpid())
     mp.set_start_method('spawn', force=True)
 
     all_gpu_list = args.gpu_lst.split(',')
@@ -118,7 +120,7 @@ if __name__ == "__main__":
     split_gpu_list = []
     for i in range(0, len(all_gpu_list), args.tp_size):
         split_gpu_list.append(",".join(all_gpu_list[i:i + args.tp_size]))
-
+    print("split_gpu_list:", split_gpu_list)
     world_size = len(split_gpu_list)
 
     if args.tag:
@@ -172,6 +174,7 @@ if __name__ == "__main__":
             return_list = manager.list()
              
             for rank in range(0, world_size):
+                os.environ["CUDA_VISIBLE_DEVICES"] = split_gpu_list[rank]
                 p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, return_list, prompts_type))
                 p.start()
                 processes.append(p)
