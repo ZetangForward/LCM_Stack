@@ -1,5 +1,5 @@
 from modelzipper.tutils import *
-from utils import ALL_LB_TESTING_SETS, LB_DATA_PROMPT, LB_PRED_LEN, DATASET2CATEGORY
+from utils import ALL_LB_TESTING_SETS, LB_DATA_PROMPT, LB_PRED_LEN, DATASET2CATEGORY, LB_DATA_PROMPT_TEMPLATE
 from datasets import load_dataset
 import argparse
 import torch
@@ -8,8 +8,14 @@ import numpy as np
 from loguru import logger
 from peft import PeftModelForCausalLM
 import os
-
-context_max_length = {"8k_setting": 7200, "tiny_setting": 15500, "normal_setting": 32000, "long_setting": 63500, "ultra_long_setting": 127500}
+from transformers import AutoConfig
+context_max_length = {
+    "8k_setting": 7200, 
+    "tiny_setting": 15500, 
+    "normal_setting": 32000, 
+    "long_setting": 63500, 
+    "ultra_long_setting": 127500
+}
 
 def seed_everything(seed):
     torch.manual_seed(seed)
@@ -30,7 +36,7 @@ def get_pred(
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     logger.info(f"rank {rank} begin to load model ...")
-    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=model_config if (model_config is not None and len(model_config)>0) else None )
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=AutoConfig.from_pretrained(model_config) if (model_config is not None and len(model_config)>0) else None )
     if adapter_path:
         test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
 
@@ -43,7 +49,7 @@ def get_pred(
         eos_token_id = [eos_token_id]
         
     eos_token_id.append(tokenizer.encode("\n", add_special_tokens=False)[-1])
-    PROMPT_TEMPLATE, PRED_LENGTH = LB_DATA_PROMPT[dataset_name], LB_PRED_LEN[dataset_name]
+    PROMPT_TEMPLATE, PROMPT_CHAT_TEMPLATE, PRED_LENGTH = LB_DATA_PROMPT[dataset_name], LB_DATA_PROMPT_TEMPLATE[dataset_name], LB_PRED_LEN[dataset_name]
     
     pred_res = []
     with torch.no_grad(), tqdm(total=len(datasets)) as pbar:
@@ -56,15 +62,22 @@ def get_pred(
                 length = sample["length"]
             else:
                 length = 0
-            prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
+            
             if (not DATASET2CATEGORY[dataset_name] in ["EN Few-Shot Learning", "Code Completion"]):
                 if tokenizer.chat_template is not None:
+                    system_prompt = PROMPT_CHAT_TEMPLATE['system']
+                    user_prompt = PROMPT_CHAT_TEMPLATE['context_template'].format(context=context) + '\n\n' + PROMPT_CHAT_TEMPLATE['user_template'].format(input=input_)
                     prompt = tokenizer.apply_chat_template(
-                        [{'role': 'user', 'content': prompt}],
+                        [
+                            {'role': 'system', 'content': system_prompt},
+                            {'role': 'user', 'content': user_prompt}
+                        ],
                         add_generation_prompt=True, tokenize=False
                     )
                 elif chat_template is not None:
                     prompt = chat_template.format(prompt)
+            else:
+                prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
 
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
 
@@ -150,7 +163,7 @@ if __name__ == "__main__":
         
         # check generated cases
         for f in already_finish_files[::-1]:
-            num_test_cases = len(load_dataset('THUDM/LongBench', f, split='test'))
+            num_test_cases = len(load_dataset('THUDM/LongBench', f, split='test', trust_remote_code=True))
             num_pred_cases = len(auto_read_data(os.path.join(pred_dir, f + ".jsonl")))
             if num_test_cases != num_pred_cases: 
                 print(f"{f} has not been processed, removing it from finished files ...")
@@ -167,7 +180,7 @@ if __name__ == "__main__":
     seed_everything(args.seed)
 
     for dataset_name in test_datasets:
-        test_data = load_dataset('THUDM/LongBench', dataset_name, split='test')
+        test_data = load_dataset('THUDM/LongBench', dataset_name, split='test', trust_remote_code=True)
         save_res_path = os.path.join(pred_dir, dataset_name + ".jsonl")
         data_subsets = []
         

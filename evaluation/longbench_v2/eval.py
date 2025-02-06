@@ -106,7 +106,16 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
             # = [output[k][0][i]/max(1, output[k][1][i]) for i in range(len(output[k][0]))]
             
     # import pdb; pdb.set_trace()
-    pd.DataFrame(result).to_csv(f"{pred_path}/result.csv")
+    df = pd.DataFrame(result)
+    columns = ['Code Repository Understanding.jsonl',
+    'Long In-context Learning.jsonl',
+    'Long Structured Data Understanding.jsonl',
+    'Long-dialogue History Understanding.jsonl',
+    'Multi-Document QA.jsonl',
+    'Single-Document QA.jsonl',
+    'Overall']
+    df = df[columns]
+    df.to_csv(f"{pred_path}/result.csv")
 
     # python eval.py --pred_path="/data/zecheng/LCM_Stack/evaluation/longbench_v2/results/Llama3.1-sft-longbench/vanilla"
 

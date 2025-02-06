@@ -26,6 +26,93 @@ LB_DATA_PROMPT = {
     "repobench-p_e": "Please complete the code given below. \n{context}{input}Next line of code:\n"
 }
 
+
+"""
+INPUT_TEMPLATE_CUSTOM
+"""
+LB_DATA_PROMPT_TEMPLATE = {
+    "narrativeqa_e": {
+        "system_prompt": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question as concisely as you can, using a single phrase if possible. Do not provide any explanation.",
+        "context_template": "Story: {context}",
+        "user_template": "Now, answer the question based on the story as concisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nQuestion: {input}\n\nAnswer:"
+    },
+    "qasper_e": {
+        "system_prompt": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.",
+        "context_template": "Article: {context}",
+        "user_template": "Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\n\nQuestion: {input}\n\nAnswer:"
+    },
+    "multifieldqa_en_e": {
+        "system_prompt": "Read the following text and answer briefly.",
+        "context_template": "{context}",
+        "user_template": "Now, answer the following question based on the above text, only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:"
+    },
+    "hotpotqa_e": {
+        "system_prompt": "Answer the question based on the given passages. Only give me the answer and do not output any other words.",
+        "context_template": "The following are given passages.\n{context}",
+        "user_template": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:"
+    },
+    "2wikimqa_e": {
+        "system_prompt": "Answer the question based on the given passages. Only give me the answer and do not output any other words.",
+        "context_template": "The following are given passages.\n{context}",
+        "user_template": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:"
+    },
+    "musique": {
+        "system_prompt": "Answer the question based on the given passages. Only give me the answer and do not output any other words.",
+        "context_template": "The following are given passages.\n{context}",
+        "user_template": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:"
+    },
+    "gov_report_e": {
+        "system_prompt": "You are given a report by a government agency. Write a one-page summary of the report.",
+        "context_template": "Report:\n{context}",
+        "user_template": "Now, write a one-page summary of the report.\n\nSummary:"
+    },
+    "qmsum_e": {
+        "system_prompt": "You are given a meeting transcript and a query containing a question or instruction. Answer the query in one or more sentences.",
+        "context_template": "Transcript:\n{context}",
+        "user_template": "Now, answer the query based on the above meeting transcript in one or more sentences.\n\nQuery: {input}\nAnswer:"
+    },
+    "multi_news_e": {
+        "system_prompt": "You are given several news passages. Write a one-page summary of all news.",
+        "context_template": "News:\n{context}",
+        "user_template": "Now, write a one-page summary of all the news.\n\nSummary:"
+    },
+    "trec_e": {
+        "system_prompt": "Please determine the type of the question below. Here are some examples of questions.",
+        "context_template": "{context}",
+        "user_template": "{input}"
+    },
+    "triviaqa_e": {
+        "system_prompt": "Answer the question based on the given passage. Only give me the answer and do not output any other words. The following are some examples.",
+        "context_template": "{context}",
+        "user_template": "{input}"
+    },
+    "samsum_e": {
+        "system_prompt": "Summarize the dialogue into a few short sentences. The following are some examples.",
+        "context_template": "{context}",
+        "user_template": "{input}"
+    },
+    "passage_count_e": {
+        "system_prompt": "There are some paragraphs below sourced from Wikipedia. Some of them may be duplicates. Please carefully read these paragraphs and determine how many unique paragraphs there are after removing duplicates. In other words, how many non-repeating paragraphs are there in total?",
+        "context_template": "{context}",
+        "user_template": "Please enter the final count of unique paragraphs after removing duplicates. The output format should only contain the number, such as 1, 2, 3, and so on.\n\nThe final answer is: "
+    },
+    "passage_retrieval_en_e": {
+        "system_prompt": "Here are 30 paragraphs from Wikipedia, along with an abstract. Please determine which paragraph the abstract is from.",
+        "context_template": "{context}",
+        "user_template": "The following is an abstract.\n\n{input}\n\nPlease enter the number of the paragraph that the abstract is from. The answer format must be like \"Paragraph 1\", \"Paragraph 2\", etc.\n\nThe answer is: "
+    },
+    "lcc_e": {
+        "system_prompt": "Please complete the code given below.",
+        "context_template": "{context}",
+        "user_template": "Next line of code:\n"
+    },
+    "repobench-p_e": {
+        "system_prompt": "Please complete the code given below.",
+        "context_template": "{context}",
+        "user_template": "{input}Next line of code:\n"
+    }
+}
+
 LB_PRED_LEN = {
     "narrativeqa_e": 128,
     "qasper_e": 128,

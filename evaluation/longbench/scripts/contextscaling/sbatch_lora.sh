@@ -22,4 +22,4 @@ conda activate zecheng
 
 cd /mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench
 
-bash scripts/run.sh "meta-llama/Meta-Llama-3-8B-Instruct" "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/pg19/Llama-3-8B-Scaling-Noise/lora/global_step50" "Llama-3-8B-Scaling-Noise/global_step50" "0,1,2,3" "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/pg19/Llama-3-8B-Scaling-Noise/lora/global_step50/config.json"
+bash scripts/run.sh "meta-llama/Meta-Llama-3-8B-Instruct" "/mnt/petrelfs/tangzecheng/local_ckpt/pg19/Llama-3-8B-Scaling-CE/lora/global_step350_hf" "Llama-3-8B-Scaling-CE/lora/global_step350_hf" "" "/mnt/petrelfs/tangzecheng/local_ckpt/pg19/Llama-3-8B-Scaling-CE/lora/global_step350_hf/config.json"

@@ -12,7 +12,7 @@ if [ -z "$TAG" ]; then
 fi
 
 if [ -z "$GPU_ID" ]; then
-    GPU_ID="0,1,2,3,4,5,6,7"
+    GPU_ID=""
 fi
 
 python main.py \
@@ -22,8 +22,7 @@ python main.py \
     --adapter_path=$ADAPTER_PATH \
     --save_path='./results' \
     --gpu_id=$GPU_ID \
-    --tp_size=1 \
-    --test_full;
+    --tp_size=1;
 
 
 # bash scripts/run.sh "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/pg19/Llama-3.1-8B/perturb_loss_3"

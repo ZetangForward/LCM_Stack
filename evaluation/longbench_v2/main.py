@@ -10,7 +10,7 @@ from loguru import logger
 from peft import PeftModelForCausalLM
 import os
 
-
+from transformers import AutoConfig
 def chunks(lst, chunk_num):
     """Yield successive n-sized chunks from lst."""
     chunk_width = len(lst) // chunk_num
@@ -42,13 +42,14 @@ def extract_answer(response):
         else:
             return None
         
-def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, return_list=None, prompts_type = None):
+def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, return_list=None, prompts_type = None, model_config = None):
     # os.environ["CUDA_VISIBLE_DEVICES"] = rank
+    os.environ["CUDA_VISIBLE_DEVICES"] = rank
     logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     logger.info(f"rank {rank} begin to load model ...")
-    test_model = AutoModelForCausalLM.from_pretrained(model_path, use_flash_attention_2="flash_attention_2", device_map="auto").half().eval()
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=model_config if (model_config is not None and len(model_config)>0) else None )
     if adapter_path:
         test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
 
@@ -68,13 +69,12 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                                                                     replace('$C_D$', sample['choice_D'].strip())
 
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids.to(test_model.device)
-
+            logger.info("input_shape: ")
+            logger.info(textual_input.shape)
             outputs = test_model.generate(
                 textual_input, 
                 max_new_tokens=128, 
-                temperature=0.9,
-                do_sample = True,
-                top_p = 0.95,
+                temperature=0.1,
             )[0]
 
             pred_str = tokenizer.decode(outputs[textual_input.shape[-1]:], skip_special_tokens=True)
@@ -94,8 +94,9 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
 
 #bash llama3.1-sft.sh
 
-
+import time
 if __name__ == "__main__":
+    start_t = time.time()
     parser = argparse.ArgumentParser(description="lb testing")
     parser.add_argument('--model_path', type=str, default=None, help='Path to the model')
     parser.add_argument('--adapter_path', type=str, default=None, help='Path to the PEFT model')
@@ -111,8 +112,7 @@ if __name__ == "__main__":
     parser.add_argument("--rag", "-rag", type=int, default=0) # set to 0 if RAG is not used, otherwise set to N when using top-N retrieved context
     
     args = parser.parse_args()
-    args = parser.parse_args()
-    print("Pid:", os.getpid())
+    print("Pid:", os.getpid(),args.model_path, args.adapter_path)
     mp.set_start_method('spawn', force=True)
 
     all_gpu_list = args.gpu_lst.split(',')
@@ -146,21 +146,27 @@ if __name__ == "__main__":
         prompts_type = "0shot"
 
     # dataset = load_dataset('/data/pub_data/LongBench-v2', split='train')
-    dataset = load_dataset('THUDM/LongBench-v2', split='train')
-    data_all = dataset.filter(lambda x: (x['length'] != 'long') and (len(x['context']) < 128000 * 4))
+    # dataset = load_dataset('THUDM/LongBench-v2', split='train')
+    # data_all = dataset.filter(lambda x: (x['length'] != 'long') and (len(x['context']) < 128000 * 4))
 
     tokenzier = AutoTokenizer.from_pretrained(args.model_path)
-    new_data = []
-    for sample in tqdm(data_all):
-        if tokenzier(sample['context'], return_tensors='pt').input_ids.shape[1]<=128000:
-            new_data.append(sample)
+    model_config = os.path.join(args.adapter_path, "config.json")#AutoConfig.from_pretrained(args.adapter_path) if args.adapter_path else None
 
+    # new_data = []
+    # for sample in tqdm(data_all):
+    #     if tokenzier(sample['context'], return_tensors='pt').input_ids.shape[1]<=128000:
+    #         new_data.append(sample)
+    new_data = json.load(open("/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench_v2/data/LongBenchV2.json","r"))
     test_datasets = ['Code Repository Understanding', 
                      'Long In-context Learning',
                      'Long Structured Data Understanding',
                      'Long-dialogue History Understanding',
                      'Multi-Document QA',
                      'Single-Document QA']
+
+    # with open("/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench_v2/data/LongBenchV2.json","w") as f:
+    #     json.dump(new_data, f)
+    # print("保存成功 ! ! !")
 
     for dataset_name in test_datasets:
         test_data = [k for k in new_data if k['domain'] == dataset_name]
@@ -174,8 +180,8 @@ if __name__ == "__main__":
             return_list = manager.list()
              
             for rank in range(0, world_size):
-                os.environ["CUDA_VISIBLE_DEVICES"] = split_gpu_list[rank]
-                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, return_list, prompts_type))
+                # os.environ["CUDA_VISIBLE_DEVICES"] = split_gpu_list[rank]
+                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, return_list, prompts_type, model_config))
                 p.start()
                 processes.append(p)
                 time.sleep(5)
@@ -197,6 +203,7 @@ if __name__ == "__main__":
     exit_code = os.system(command)
 
     # 检查命令是否成功执行
+    print("耗时:", (time.time()-start_t)/60, "分钟")
     if exit_code == 0:
         print("命令执行成功！")
     else:

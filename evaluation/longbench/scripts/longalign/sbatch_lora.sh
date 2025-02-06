@@ -22,4 +22,4 @@ conda activate zecheng
 
 cd /mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench
 
-bash scripts/run.sh "meta-llama/Meta-Llama-3.1-8B-Instruct" "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/long-context-training-V1/Llama-3.1-8B-Instruct/lora/global_step100" "long-context-training-V1-lora/global_step100" "0,1,2,3"
+bash scripts/run.sh "meta-llama/Meta-Llama-3.1-8B-Instruct" "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/baseline/Llama-3.1-8B-Instruct/longalpaca/adapter/global_step250" "Llama-3.1-8B-Instruct-longalpaca"

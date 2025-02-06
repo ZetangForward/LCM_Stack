@@ -92,7 +92,7 @@ def construct_gpu_ids(args):
 
 def prepare_babilong_data(data_dir, tokenizer, inference_scaling=False, test_full=False):
     if not test_full:
-        tasks = ['qa2', 'qa3', 'qa4', 'qa5', 'qa6', 'qa7']
+        tasks = ['qa1', 'qa2', 'qa3', 'qa7', 'qa8']
         split_names = ['0k', '1k', '2k', '4k', '8k', '16k', '32k', '64k']
     else:
         tasks = ['qa1', 'qa2', 'qa3', 'qa4', 'qa5', 'qa6', 'qa7', 'qa8', 'qa9', 'qa10']

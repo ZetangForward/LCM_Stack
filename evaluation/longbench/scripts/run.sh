@@ -14,7 +14,7 @@ if [ -z "$TAG" ]; then
 fi
 
 if [ -z "$GPU_LST" ]; then
-    GPU_LST="0,1,2,3,4,5,6,7"
+    GPU_LST=""
 fi
 
 if [ -z "$MODEL_CONFIG" ]; then
@@ -35,6 +35,6 @@ python main.py \
     --save_path="./results";
 
 
-# bash scripts/contextual_denoising/llama3.1-8b-base.sh "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/pg19/Llama-3.1-8B/perturb_loss_3"
+# bash scripts/run.sh "meta-llama/Meta-Llama-3.1-8B-Instruct"
 # bash scripts/contextual_denoising/llama3.1-8b-base.sh "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/pg19/Llama-3.1-8B/perturb_loss"
 # bash scripts/contextual_denoising/llama3.1-8b-base.sh "/mnt/petrelfs/tangzecheng/remote_bucket/zecheng/ckpt/pg19/Llama-3.1-8B/real_opposite_gradient_large_pos-1e-3-v2"
