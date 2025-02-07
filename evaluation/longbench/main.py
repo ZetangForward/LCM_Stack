@@ -1,5 +1,5 @@
 from modelzipper.tutils import *
-from utils import ALL_LB_TESTING_SETS, LB_DATA_PROMPT, LB_PRED_LEN, DATASET2CATEGORY
+from utils import ALL_LB_TESTING_SETS, LB_DATA_PROMPT, LB_PRED_LEN, DATASET2CATEGORY, LB_DATA_PROMPT_TEMPLATE
 from datasets import load_dataset
 import argparse
 import torch
@@ -8,8 +8,14 @@ import numpy as np
 from loguru import logger
 from peft import PeftModelForCausalLM
 import os
-
-context_max_length = {"8k_setting": 7200, "tiny_setting": 15500, "normal_setting": 32000, "long_setting": 63500, "ultra_long_setting": 127500}
+from transformers import AutoConfig
+context_max_length = {
+    "8k_setting": 7200, 
+    "tiny_setting": 15500, 
+    "normal_setting": 32000, 
+    "long_setting": 63500, 
+    "ultra_long_setting": 127500
+}
 
 def seed_everything(seed):
     torch.manual_seed(seed)
@@ -20,13 +26,17 @@ def seed_everything(seed):
     torch.backends.cudnn.deterministic = True
 
 
-def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, dataset_name=None, max_context_length=None, chat_template=None, return_list=None):
+def get_pred(
+        rank=None, model_path=None, adapter_path=None, datasets=None, 
+        dataset_name=None, max_context_length=None, chat_template=None, 
+        model_config=None, return_list=None
+    ):
     os.environ["CUDA_VISIBLE_DEVICES"] = rank
     logger.info(f"gpu id {rank} is processing {dataset_name} length {len(datasets)} ...")
     # load models
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    logger.info(f"rank {rank} 开始加载模型 ...")
-    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto")
+    logger.info(f"rank {rank} begin to load model ...")
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=AutoConfig.from_pretrained(model_config) if (model_config is not None and len(model_config)>0) else None )
     if adapter_path:
         test_model = PeftModelForCausalLM.from_pretrained(test_model, adapter_path).eval()
 
@@ -39,7 +49,7 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
         eos_token_id = [eos_token_id]
         
     eos_token_id.append(tokenizer.encode("\n", add_special_tokens=False)[-1])
-    PROMPT_TEMPLATE, PRED_LENGTH = LB_DATA_PROMPT[dataset_name], LB_PRED_LEN[dataset_name]
+    PROMPT_TEMPLATE, PROMPT_CHAT_TEMPLATE, PRED_LENGTH = LB_DATA_PROMPT[dataset_name], LB_DATA_PROMPT_TEMPLATE[dataset_name], LB_PRED_LEN[dataset_name]
     
     pred_res = []
     with torch.no_grad(), tqdm(total=len(datasets)) as pbar:
@@ -52,15 +62,22 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                 length = sample["length"]
             else:
                 length = 0
-            prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
+            
             if (not DATASET2CATEGORY[dataset_name] in ["EN Few-Shot Learning", "Code Completion"]):
                 if tokenizer.chat_template is not None:
+                    system_prompt = PROMPT_CHAT_TEMPLATE['system']
+                    user_prompt = PROMPT_CHAT_TEMPLATE['context_template'].format(context=context) + '\n\n' + PROMPT_CHAT_TEMPLATE['user_template'].format(input=input_)
                     prompt = tokenizer.apply_chat_template(
-                        [{'role': 'user', 'content': prompt}],
+                        [
+                            {'role': 'system', 'content': system_prompt},
+                            {'role': 'user', 'content': user_prompt}
+                        ],
                         add_generation_prompt=True, tokenize=False
                     )
                 elif chat_template is not None:
                     prompt = chat_template.format(prompt)
+            else:
+                prompt = PROMPT_TEMPLATE.format(input=input_, context=context)
 
             textual_input = tokenizer(prompt, return_tensors="pt").input_ids[0].to(test_model.device)
 
@@ -69,12 +86,6 @@ def get_pred(rank=None, model_path=None, adapter_path=None, datasets=None, datas
                 prompt = tokenizer.decode(textual_input[:half], skip_special_tokens=True) + tokenizer.decode(textual_input[-half:], skip_special_tokens=True)
 
             input_ids = tokenizer(prompt, return_tensors="pt").to(test_model.device).input_ids
-            if input_ids.size(-1) == 0:
-                print("=============")
-                print(f"textual_input.shape {textual_input.shape}")
-                print(f"max_context_length {max_context_length}")
-                print("=============")
-            print(f"context length: {input_ids.shape}")
 
             if dataset_name in ["2wikimqa_e", "hotpotqa_e", "musique_e", "multifieldqa_en_e", "qasper_e", "narrativeqa_e", "samsum_e"]:
                 outputs = test_model.generate(
@@ -115,27 +126,36 @@ if __name__ == "__main__":
     parser.add_argument('--chat_template', type=str, default=None, help='chat template')
     parser.add_argument('--model_max_length_setting', type=str, default="normal_setting", help='Model max length setting')
     parser.add_argument('--seed', type=int, default=27, help='default seed')
+    parser.add_argument('--model_config', type=str, default=None, help='model config')
 
     args = parser.parse_args()
     
     mp.set_start_method('spawn', force=True)
 
-    all_gpu_list = args.gpu_lst.split(',')
-    logger.info(f'begin to eval on {len(all_gpu_list)} gpus | tensor parallel size is {args.tp_size}...')
+    # all_gpu_list = args.gpu_lst.split(',')
+    all_gpu_list = os.environ.get("SLURM_JOB_GPUS", "").split(',')
+    if not all_gpu_list[0]:
+        all_gpu_list = os.environ.get("SLURM_STEP_GPUS", "").split(',')
+
+    logger.info(f'begin to eval on {all_gpu_list} gpus | tensor parallel size is {args.tp_size}...')
     split_gpu_list = []
     for i in range(0, len(all_gpu_list), args.tp_size):
         split_gpu_list.append(",".join(all_gpu_list[i:i+args.tp_size]))
 
     world_size = len(split_gpu_list)
 
-    if args.tag:
+    if args.tag and len(args.tag) > 0:
         pred_dir = os.path.join(args.save_path, args.tag)
     else:
         if args.adapter_path:
-            suffix_tag = f"{args.adapter_path.split('/')[-2]}-{args.adapter_path.split('/')[-1]}"
+            suffix_tag = f"{args.adapter_path.split('/')[-2]}/{args.adapter_path.split('/')[-1]}"
             pred_dir = os.path.join(args.save_path, suffix_tag)
         else:
-            pred_dir = os.path.join(args.save_path, "vanilla")
+            suffix_tag = f"{args.model_path.split('/')[-2]}/{args.model_path.split('/')[-1]}"
+            pred_dir = os.path.join(args.save_path, suffix_tag)
+
+    seed_everything(args.seed)
+    os.makedirs(args.save_path, exist_ok=True)
     
     if os.path.exists(pred_dir):
         already_finish_files = auto_read_dir(pred_dir, file_suffix=".jsonl")
@@ -143,7 +163,7 @@ if __name__ == "__main__":
         
         # check generated cases
         for f in already_finish_files[::-1]:
-            num_test_cases = len(load_dataset('THUDM/LongBench', f, split='test'))
+            num_test_cases = len(load_dataset('THUDM/LongBench', f, split='test', trust_remote_code=True))
             num_pred_cases = len(auto_read_data(os.path.join(pred_dir, f + ".jsonl")))
             if num_test_cases != num_pred_cases: 
                 print(f"{f} has not been processed, removing it from finished files ...")
@@ -160,7 +180,7 @@ if __name__ == "__main__":
     seed_everything(args.seed)
 
     for dataset_name in test_datasets:
-        test_data = load_dataset('THUDM/LongBench', dataset_name, split='test')
+        test_data = load_dataset('THUDM/LongBench', dataset_name, split='test', trust_remote_code=True)
         save_res_path = os.path.join(pred_dir, dataset_name + ".jsonl")
         data_subsets = []
         
@@ -174,7 +194,7 @@ if __name__ == "__main__":
             return_list = manager.list()
              
             for rank in range(0, world_size):
-                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, args.chat_template, return_list))
+                p = mp.Process(target=get_pred, args=(split_gpu_list[rank], args.model_path, args.adapter_path, data_subsets[rank], dataset_name, max_context_length, args.chat_template, args.model_config, return_list))
                 p.start()
                 processes.append(p)
                 time.sleep(5)

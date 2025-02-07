@@ -1,0 +1,181 @@
+2025-02-02 13:44:09.419 | INFO     | __main__:<module>:127 - begin to eval on ['3', '4', '5', '6'] gpus | tensor parallel size is 1...
+2025-02-02 13:44:09.433 | INFO     | modelzipper.tutils:auto_mkdir:343 - ./results/Llama-3-8B-Scaling-Noise/global_step50 not exist! --> Create dir ./results/Llama-3-8B-Scaling-Noise/global_step50
+2025-02-02 13:44:09.434 | INFO     | __main__:<module>:163 - evaluating on datasets: ['qasper_e', 'passage_retrieval_en_e', 'trec_e', 'musique', 'lcc_e', '2wikimqa_e', 'gov_report_e', 'hotpotqa_e', 'multi_news_e', 'repobench-p_e', 'passage_count_e', 'samsum_e', 'triviaqa_e', 'multifieldqa_en_e']
+2025-02-02 13:44:09.435 | INFO     | __main__:<module>:165 - max_context_length are set as 32000
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 13:44:43.280 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing qasper_e length 56 ...
+2025-02-02 13:44:44.128 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-2:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", model_config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+2025-02-02 13:44:48.485 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing qasper_e length 56 ...
+ 25%|██▌       | 1/4 [00:34<01:44, 34.99s/it]2025-02-02 13:44:49.272 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-3:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", model_config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+ 50%|█████     | 2/4 [00:38<00:32, 16.47s/it]2025-02-02 13:44:53.352 | INFO     | __mp_main__:get_pred:29 - gpu id 5 is processing qasper_e length 56 ...
+2025-02-02 13:44:54.135 | INFO     | __mp_main__:get_pred:32 - rank 5 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-4:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", model_config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+ 75%|███████▌  | 3/4 [00:43<00:11, 11.06s/it]2025-02-02 13:44:58.165 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing qasper_e length 56 ...
+2025-02-02 13:44:58.921 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-5:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", model_config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+100%|██████████| 4/4 [00:47<00:00,  8.57s/it]100%|██████████| 4/4 [00:47<00:00, 11.97s/it]
+2025-02-02 13:45:01.386 | INFO     | modelzipper.tutils:auto_save_data:304 - jsonl file saved successfully!
+2025-02-02 13:45:01.388 | INFO     | modelzipper.tutils:auto_save_data:329 - Save file to ./results/Llama-3-8B-Scaling-Noise/global_step50/qasper_e.jsonl | len: 0 |  size: 0B
+  0%|          | 0/4 [00:00<?, ?it/s]2025-02-02 13:45:35.965 | INFO     | __mp_main__:get_pred:29 - gpu id 3 is processing passage_retrieval_en_e length 75 ...
+2025-02-02 13:45:36.833 | INFO     | __mp_main__:get_pred:32 - rank 3 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-7:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+ 25%|██▌       | 1/4 [00:36<01:48, 36.08s/it]2025-02-02 13:45:40.342 | INFO     | __mp_main__:get_pred:29 - gpu id 4 is processing passage_retrieval_en_e length 75 ...
+2025-02-02 13:45:41.489 | INFO     | __mp_main__:get_pred:32 - rank 4 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-8:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+2025-02-02 13:45:44.425 | INFO     | __mp_main__:get_pred:29 - gpu id 5 is processing passage_retrieval_en_e length 75 ...
+ 50%|█████     | 2/4 [00:40<00:34, 17.41s/it]2025-02-02 13:45:45.216 | INFO     | __mp_main__:get_pred:32 - rank 5 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Process Process-9:
+Traceback (most recent call last):
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/longbench/main.py", line 33, in get_pred
+    test_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto", config=model_config)
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4097, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+TypeError: LlamaForCausalLM.__init__() got an unexpected keyword argument 'model_config'
+ 75%|███████▌  | 3/4 [00:43<00:10, 10.87s/it]2025-02-02 13:45:50.122 | INFO     | __mp_main__:get_pred:29 - gpu id 6 is processing passage_retrieval_en_e length 75 ...
+2025-02-02 13:45:50.900 | INFO     | __mp_main__:get_pred:32 - rank 6 begin to load model ...
+The model was loaded with use_flash_attention_2=True, which is deprecated and may be removed in a future release. Please use `attn_implementation="flash_attention_2"` instead.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.86s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.82s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.82s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.40s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.56s/it]
+  0%|          | 0/75 [00:00<?, ?it/s]/mnt/petrelfs/tangzecheng/anaconda3/envs/zecheng/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+  1%|▏         | 1/75 [00:04<05:00,  4.06s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+  3%|▎         | 2/75 [00:05<03:17,  2.70s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+  4%|▍         | 3/75 [00:07<02:40,  2.22s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+  5%|▌         | 4/75 [00:09<02:25,  2.05s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+  7%|▋         | 5/75 [00:11<02:17,  1.97s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+  8%|▊         | 6/75 [00:13<02:18,  2.01s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+  9%|▉         | 7/75 [00:14<02:06,  1.87s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 11%|█         | 8/75 [00:16<02:04,  1.85s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 12%|█▏        | 9/75 [00:18<02:00,  1.83s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 13%|█▎        | 10/75 [00:20<01:56,  1.80s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 15%|█▍        | 11/75 [00:21<01:54,  1.80s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 16%|█▌        | 12/75 [00:23<01:55,  1.83s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 17%|█▋        | 13/75 [00:25<01:48,  1.75s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 19%|█▊        | 14/75 [00:27<01:47,  1.77s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 20%|██        | 15/75 [00:28<01:44,  1.74s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 21%|██▏       | 16/75 [00:30<01:44,  1.77s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 23%|██▎       | 17/75 [00:32<01:39,  1.72s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 24%|██▍       | 18/75 [00:33<01:36,  1.70s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 25%|██▌       | 19/75 [00:35<01:35,  1.70s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 27%|██▋       | 20/75 [00:37<01:31,  1.66s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 28%|██▊       | 21/75 [00:38<01:31,  1.70s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 29%|██▉       | 22/75 [00:40<01:31,  1.72s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 31%|███       | 23/75 [00:42<01:27,  1.68s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 32%|███▏      | 24/75 [00:44<01:28,  1.74s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 33%|███▎      | 25/75 [00:46<01:30,  1.81s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+ 35%|███▍      | 26/75 [00:47<01:25,  1.75s/it]The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:None for open-end generation.
+slurmstepd: error: *** JOB 5120894 ON SH-IDC1-10-140-24-101 CANCELLED AT 2025-02-02T13:46:53 ***

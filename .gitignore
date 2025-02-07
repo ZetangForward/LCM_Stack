@@ -1,1 +1,11 @@
-evaluation/longbench/results/
+evaluation/longbench/results
+evaluation/longbench_v2/results
+evaluation/babilong/results
+evaluation/LongPPL/results
+*.log
+*.out
+*.err
+*/*/scripts/*
+*.pyc
+*.sh
+evaluation/longbench/scripts/
