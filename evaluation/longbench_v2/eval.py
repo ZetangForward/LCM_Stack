@@ -105,13 +105,10 @@ def main(pred_path: str = None, benchmark_dataset_path: str = None):
     result = {k:[] for k in output.keys()}
     for k in output.keys():
         for i in range(5):
-            result[k].append(output[k][0][i]/max(1, output[k][1][i]))
-            # = [output[k][0][i]/max(1, output[k][1][i]) for i in range(len(output[k][0]))]
-        for i in range(5):
             result[k].append(round(output[k][0][i]/max(1, output[k][1][i]), 2))
             # = [output[k][0][i]/max(1, output[k][1][i]) for i in range(len(output[k][0]))]
             
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     pd.DataFrame(result).to_csv(f"{pred_path}/result.csv")
 
     # python eval.py --pred_path="/data/zecheng/LCM_Stack/evaluation/longbench_v2/results/Llama3.1-sft-longbench/vanilla"
