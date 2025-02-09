@@ -31,10 +31,10 @@ def seed_everything(seed):
 
 
 def query_gpt4(datasets, dataset_name, return_list):
-    # openai.api_key = "sk-8BG3gQz68h89HLdz04D54a4dF41845D49548F0293bDe5c44" # sk-47vSsxMRgigQ0SanDd79E52e95De4bF48b8c56F5B5797c2d
-    # openai.base_url = 'https://chatapi.onechats.top/v1/'  # https://api.onechats.cn/v1/
-    openai.api_key = "sk-47vSsxMRgigQ0SanDd79E52e95De4bF48b8c56F5B5797c2d"
-    openai.base_url = 'https://api.onechats.cn/v1/'
+    openai.api_key = "sk-8BG3gQz68h89HLdz04D54a4dF41845D49548F0293bDe5c44" # sk-47vSsxMRgigQ0SanDd79E52e95De4bF48b8c56F5B5797c2d
+    openai.base_url = 'https://chatapi.onechats.top/v1/'  # https://api.onechats.cn/v1/
+    # openai.api_key = "sk-47vSsxMRgigQ0SanDd79E52e95De4bF48b8c56F5B5797c2d"
+    # openai.base_url = 'https://api.onechats.cn/v1/'
     PROMPT_TEMPLATE, PROMPT_CHAT_TEMPLATE, max_new_token = LB_DATA_PROMPT[dataset_name], LB_DATA_PROMPT_TEMPLATE[dataset_name], LB_PRED_LEN[dataset_name]
     pred_res = []
     print(f"start to process {dataset_name} ...")
