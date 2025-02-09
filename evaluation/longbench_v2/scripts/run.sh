@@ -73,3 +73,6 @@ python main.py \
 
 
 # nohup bash scripts/run.sh "meta-llama/Meta-Llama-3-8B-Instruct" "4,5,6,7" > base_3.log  2>&1 &
+
+
+# nohup bash scripts/run.sh "/data/zecheng/ckpt/long-context-training-V2/Qwen2.5-7B-Instruct/full_v1/global_step300" "4,5,6,7" > qwen_CD.log  2>&1 &

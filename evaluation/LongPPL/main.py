@@ -101,6 +101,7 @@ def worker(args, input_texts, result_list, model_config, adapter_path,use_yarn):
     if use_yarn:
         pass
         # config = "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/LongPPL/yarn_config.json"
+
     model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.bfloat16, use_flash_attention_2="flash_attention_2", device_map="auto",  
     config = AutoConfig.from_pretrained(config) if config else None)
 
@@ -136,7 +137,7 @@ if __name__ == "__main__":
     parser.add_argument("--gpu-lst",type=str)
     parser.add_argument("--adapter-path",type=str, default = "")
     parser.add_argument("--tp-size",type=int, default=1)
-    parser.add_argument("--evaluator-model", type=str, default = "Crystalcareai/meta-llama-3.1-8b")
+    parser.add_argument("--evaluator-model", type=str, default = "/data/hf_models/Meta-Llama-3.1-8B")
     parser.add_argument("--evaluator-name", type=str, help='To use the offline key tokens we provided, set it to Qwen2-72B-Instruct, Mistral-Large-Instruct-2407, or Meta-Llama-3.1-8B', default="Meta-Llama-3.1-8B")
     parser.add_argument("--mode", type=str, choices=['online', 'offline'], default='offline')
     parser.add_argument("-d", "--dataset", type=str)
@@ -150,12 +151,12 @@ if __name__ == "__main__":
     parser.add_argument("--tokenized", type=str, default = "")
     parser.add_argument("--trunc-len", type=int, default=4096)
     parser.add_argument("--sliding-window", type=int, default=1024)
-    parser.add_argument("--llama-path", type=str, default="meta-llama/Llama-2-7b-hf")
+    parser.add_argument("--llama-path", type=str, default="/data/hf_models/Llama-2-7b-hf")
     
     args = parser.parse_args()
     print("Adapter Path: ", args.adapter_path)
 
-    args.key_text_path = "/mnt/petrelfs/tangzecheng/LCM_Stack/evaluation/LongPPL/LongPPL/perplexity/key_text"
+    args.key_text_path = "/data/zecheng/LCM_Stack/evaluation/LongPPL/LongPPL/perplexity/key_text"
     print("Pid:", os.getpid())
     mp.set_start_method('spawn', force=True)
 
